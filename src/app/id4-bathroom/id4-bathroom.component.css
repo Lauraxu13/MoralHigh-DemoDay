@@ -1,0 +1,14 @@
+.dialogue.hide{
+    display: none
+}
+
+.bathroom2 {
+    display: none;
+}
+
+
+.bathroom2.show{
+
+    display:initial;
+}
+

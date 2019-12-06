@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-id4-bathroom',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Id4BathroomComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit() {
-  }
 
+  nextCounter: number = 0;
+
+  hideDialogue: boolean = false;
+  showOpt:boolean=false
+
+  constructor(private router: Router) {}
+
+  nextButton() {
+    this.nextCounter++;
+    if (this.nextCounter <= 1)  {
+      this.hideDialogue = true;
+    }
+    else {
+      this.showOpt =true
+    }
+     }
+
+
+
+
+  ngOnInit() {}
 }
+

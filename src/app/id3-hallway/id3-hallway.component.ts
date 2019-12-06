@@ -15,10 +15,10 @@ export class Id3HallwayComponent implements OnInit {
 
   nextButton() {
     this.nextCounter++;
-    if (this.nextCounter <= 1)  {
+    if (this.nextCounter <= 1) {
       this.showDialogue = true;
-    }else {
-       this.router.navigate(["bathroom"])
+    } else {
+      this.router.navigate(["bathroom"]);
     }
   }
 
