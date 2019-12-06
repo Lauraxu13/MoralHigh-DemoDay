@@ -1,0 +1,11 @@
+.dialogue {
+    display:none;
+}
+
+.dialogue.one {
+    display:initial;
+
+}
+.dialogue.two {
+    display:initial;
+}
