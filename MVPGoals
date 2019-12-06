@@ -1,0 +1,17 @@
+MVP
+Linear progress through at least 3 scenes
+Ability to choose between at least 2 options per scene
+Choices affect your score (3 axes of score)
+end screen shows 3 individual scores + your top category
+final scores and top category are stored in DB
+end scene displays comparison with other users’ scores (number of users in each top category)
+
+
+Stretch
+Customizing character (skin color, hair color)
+At least one time-limited response
+Branching the storyline to different scenes based on choices
+Customizing character more (e.g. hair style, clothes)
+At least one additional option in one scene based on previous choices
+Quiz on previous information
+Add animation to scenes
