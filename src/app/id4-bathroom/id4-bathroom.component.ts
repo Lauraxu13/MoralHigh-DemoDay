@@ -19,7 +19,7 @@ export class Id4BathroomComponent implements OnInit {
   charisma: number;
   total: TotalScore;
   flip: boolean= true;
-  doAnimate: boolean = false;
+  
 
   constructor(private router: Router, private service: MasterService) { }
 
