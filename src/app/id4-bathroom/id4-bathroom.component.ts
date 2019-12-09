@@ -19,6 +19,7 @@ export class Id4BathroomComponent implements OnInit {
   charisma: number;
   total: TotalScore;
   flip: boolean= true;
+  doAnimate: boolean = false;
 
   constructor(private router: Router, private service: MasterService) { }
 
@@ -27,6 +28,7 @@ export class Id4BathroomComponent implements OnInit {
     if (this.nextCounter <= 1) {
       this.hideDialogue = true;
       this.flip = !this.flip
+      this.doAnimate = true;
     } else {
       this.showOpt = !this.showOpt;
     }

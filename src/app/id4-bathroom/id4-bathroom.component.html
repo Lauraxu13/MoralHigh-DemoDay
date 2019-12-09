@@ -12,7 +12,7 @@
         </div>
         <button class="next" (click)="nextButton()">next</button>
 
-        <div class="char meanGirl"><img [ngClass]="{flip:!flip}" src="/assets/moralhighmeangirl.png"> <img [ngClass]="{flip:flip}" src="/assets/moralhighmeangirlTP.png"></div>
+        <div class="char meanGirl" ><img [ngClass]="{flip:!flip}" src="/assets/moralhighmeangirl.png"> <img [ngClass]="{animate: doAnimate}" *ngIf="doAnimate" [ngClass]="{flip:flip}" src="/assets/moralhighmeangirlTP.png"></div>
 
 
     </div>
