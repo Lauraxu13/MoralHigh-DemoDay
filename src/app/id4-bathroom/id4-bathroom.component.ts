@@ -14,10 +14,12 @@ export class Id4BathroomComponent implements OnInit {
   doAnimate: boolean = false;
   nextCounter: number = 0;
   hideDialogue: boolean = false;
-  showOpt: boolean = false
+  showOpt: boolean = true
   popularity: number;
   charisma: number;
   total: TotalScore;
+  flip: boolean= true;
+  
 
   constructor(private router: Router, private service: MasterService) { }
 
@@ -25,8 +27,10 @@ export class Id4BathroomComponent implements OnInit {
     this.nextCounter++;
     if (this.nextCounter <= 1) {
       this.hideDialogue = true;
+      this.flip = !this.flip
+      this.doAnimate = true;
     } else {
-      this.showOpt = true;
+      this.showOpt = !this.showOpt;
     }
   }
 

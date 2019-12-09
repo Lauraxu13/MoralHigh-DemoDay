@@ -5,18 +5,20 @@
     <div class="char main"><img src="/assets/moralhighmaincharacter.png"></div>
 
 
-    <div class="bathroom1">
+    <div class="bathroom1" [ngClass]="{show: !showOpt}">
 
         <div class="dialogue" [ngClass]="{hide: hideDialogue}">
             <p>Rude comment to mGirl from pGirl</p>
         </div>
         <button class="next" (click)="nextButton()">next</button>
 
-        <div class="char meanGirl"><img src="/assets/moralhighmeangirl.png"></div>
+        <div class="char meanGirl" ><img [ngClass]="{flip:!flip}" src="/assets/moralhighmeangirl.png"> <img [ngClass]="{animate: doAnimate}" *ngIf="doAnimate" [ngClass]="{flip:flip}" src="/assets/moralhighmeangirlTP.png"></div>
+
 
     </div>
 
-    <div class="bathroom2" [ngClass]="{show: showOpt}">
+    <div class="bathroom2" [ngClass]="{show:showOpt}">
+        <p>What will you do?</p>
         <button class="opt1" (click)="opt1id4()">Tell heather about the toilet paper sticking out of her skirt</button>
         <button class="opt2" (click)="opt2id4()">Dont say anything</button>
     </div>

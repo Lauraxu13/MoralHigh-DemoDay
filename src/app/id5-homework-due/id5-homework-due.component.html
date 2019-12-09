@@ -4,17 +4,20 @@
 
     <div class="char main"><img src="/assets/moralhighmaincharacter.png"></div>
 
-    <div class="hw2" [ngClass]="{show: showOpt}">
-        <button class="opt1" (click)="opt1id5()">You did the homework</button>
-        <button class="opt2" (click)="opt2id5()">You didn't do the homework</button>
-    </div>
-    <div class="hw1">
+    <div class="hw1" [ngClass]="{show: showOpt}">
 
         <div class="dialogue" [ngClass]="{hide: hideDialogue}">
             <p>Teacher asks about homework</p>
         </div>
         <button class="next" [ngClass]="{hide: hideDialogue}" (click)="nextButton()">next</button>
 
-        <div class="char meanGirl"><img src="/assets/moralhighmeangirl.png"></div>
+        <div class="char teacher"><img src="/assets/moralhighteacher.png"></div>
 
+    </div>
+
+
+
+    <div class="hw2" [ngClass]="{show: !showOpt}">
+        <button class="opt1" (click)="opt1id5()">You did the homework</button>
+        <button class="opt2" (click)="opt2id5()">You didn't do the homework</button>
     </div>
