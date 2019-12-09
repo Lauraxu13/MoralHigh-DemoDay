@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { TotalScore } from '../total-score';
+import { Router } from '@angular/router';
+import { MasterService } from '../master.service';
 
 @Component({
   selector: 'app-id7-scoring',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Id7ScoringComponent implements OnInit {
 
-  constructor() { }
+
+  total: TotalScore;
+
+
+  constructor(private router: Router, private service: MasterService) { }
+
+
+
+
 
   ngOnInit() {
+    this.total = this.service.getTS();
   }
 
 }
