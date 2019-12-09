@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MasterService } from '../master.service';
 import { Router } from '@angular/router';
+import { Id2IntroComponent } from '../id2-intro/id2-intro.component';
 
 @Component({
   selector: 'app-id1-home-page',
@@ -16,6 +17,9 @@ export class Id1HomePageComponent implements OnInit {
   newPlayer(){
     this.service.setName(this.name)
     
+  }
+  nextPage(){
+    this.router.navigate(["intro"])
   }
 
   ngOnInit() {
