@@ -7,9 +7,8 @@
 
 .char{
     height: 60%;
-    /* width: 2%; */
-    position: absolute;
 
+    position: absolute;
 }
 
 .main{
@@ -23,17 +22,48 @@
     left: 70%;
 }
 
-
 img {
-    height: auto;
-    /* width: 100%; */
     height: 100%;
 }
-
 
 .dialogue.hide{
     display: none
 }
+
+
+.bathroom2{
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(128, 128, 128, 0.6);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.bathroom2 > p {
+margin: 0 auto;
+margin-top: 10%;
+font-size: 20px;
+background-color: rgb(255, 255, 255, 0.8);
+border-radius: 20px;
+padding: 50px;
+}
+
+
+.bathroom2 button {
+    width: 50%;
+    height: 10%;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: rgb(255, 255, 255, 0.8);
+    border-radius: 10px;
+
+
+}
+
 
 
 .dialogue p {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MasterService } from '../master.service';
 
 @Component({
   selector: 'app-id2-intro',
@@ -8,15 +9,19 @@ import { Router } from '@angular/router';
 })
 export class Id2IntroComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  name: string;
 
-  nextButton(){
+  constructor(private router: Router, private service: MasterService) { }
+
+
+  nextButton() {
     this.router.navigate(["hallway"]);
+
   }
 
 
-
   ngOnInit() {
+    this.name = this.service.getName();
   }
 
 }
