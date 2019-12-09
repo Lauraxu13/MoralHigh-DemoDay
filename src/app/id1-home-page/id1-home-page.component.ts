@@ -1,29 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import { MasterService } from '../master.service';
-import { Router } from '@angular/router';
-import { Id2IntroComponent } from '../id2-intro/id2-intro.component';
+import { Component, OnInit } from "@angular/core";
+import { MasterService } from "../master.service";
+import { Router } from "@angular/router";
+import { Id2IntroComponent } from "../id2-intro/id2-intro.component";
+import { TotalScore } from "../total-score";
 
 @Component({
-  selector: 'app-id1-home-page',
-  templateUrl: './id1-home-page.component.html',
-  styleUrls: ['./id1-home-page.component.css']
+  selector: "app-id1-home-page",
+  templateUrl: "./id1-home-page.component.html",
+  styleUrls: ["./id1-home-page.component.css"]
 })
 export class Id1HomePageComponent implements OnInit {
-  name:string;
+  name: string;
+  total: TotalScore;
 
-
-
-  constructor(private router: Router,private service: MasterService) { }
-  newPlayer(){
-    this.service.setName(this.name)
-    
+  newPlayer() {
+    this.service.setName(this.name);
+    console.log(this.total);
+    this.router.navigate(["/intro"]);
   }
-  nextPage(){
-    this.router.navigate(["intro"])
-  }
+
+  constructor(private router: Router, private service: MasterService) {}
 
   ngOnInit() {
-    this.name=this.service.getName()
+    this.name = this.service.getName();
+    this.total = this.service.getTS();
   }
-
 }

@@ -1,6 +1,6 @@
-<form (ngSubmit)="newPlayer()">
+<form (ngSubmit)="newPlayer()" #form="ngForm">
     <h1>Moral HighSchool</h1>
-    <label for="name">Name</label>
-    <input [(ngModel)]= "name"type="text" placeholder="UserName" name="name">
-    <button (click)="nextPage()" type="submit">Sart</button>
-</form>
+    <label for="name">Name Your Character
+    <input [(ngModel)]="name" type="text" placeholder="UserName" name="name"></label>
+    <button>Sart</button>
+    </form>
