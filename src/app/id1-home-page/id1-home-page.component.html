@@ -1,1 +1,6 @@
-<p>id1-home-page works!</p>
+<form (ngSubmit)="newPlayer()">
+    <h1>Moral HighSchool</h1>
+    <label for="name">Name</label>
+    <input [(ngModel)]= "name"type="text" placeholder="UserName" name="name">
+    <button (click)="nextPage()" type="submit">Sart</button>
+</form>

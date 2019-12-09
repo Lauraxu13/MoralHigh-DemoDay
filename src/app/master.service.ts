@@ -58,6 +58,14 @@ getTS():TotalScore{
   return this.totalScore;
 }
 
+getName():string{
+  return this.totalScore.name
+}
+setName(playerInfo:string){
+this.totalScore.name=playerInfo
+
+}
+
 
 // Get from data base
 
