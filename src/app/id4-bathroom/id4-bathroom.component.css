@@ -47,15 +47,12 @@ img {
     top: 10%;
 
 }
-.bathroom2 {
-    display: none;
-    border: blue solid 3px
-}
 
 
-.bathroom2.show{
 
-    display:initial;
+.show{
+
+    display:none;
 }
 
 
@@ -110,4 +107,6 @@ img {
     }
 };
 
-
+.flip{
+    display:none;
+}
