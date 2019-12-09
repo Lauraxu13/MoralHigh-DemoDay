@@ -19,6 +19,28 @@
 }
 
 
+.classBody {
+    margin: 0 auto;
+    background-image: url("/assets/classroom.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+.gymBody {
+    margin: 0 auto;
+    background-image: url("/assets/gym.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+
 
 
 

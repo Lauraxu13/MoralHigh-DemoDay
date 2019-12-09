@@ -60,6 +60,8 @@ export class Id5HomeworkDueComponent implements OnInit {
     this.academia = this.service.getTSacademia();
     this.charisma = this.service.getTScharisma();
     this.total = this.service.getTS();
+    document.body.classList.add('classBody');
+
   }
 
 }

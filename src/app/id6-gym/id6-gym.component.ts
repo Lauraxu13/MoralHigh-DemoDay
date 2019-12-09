@@ -60,6 +60,8 @@ export class Id6GymComponent implements OnInit {
     this.charisma = this.service.getTScharisma();
     this.popularity = this.service.getTSpopularity();
     this.total = this.service.getTS();
+    document.body.classList.add('gymBody');
+
   }
 
 }
