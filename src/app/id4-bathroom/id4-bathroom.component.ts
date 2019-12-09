@@ -57,6 +57,8 @@ export class Id4BathroomComponent implements OnInit {
     this.popularity = this.service.getTSpopularity();
     this.charisma = this.service.getTScharisma();
     this.total = this.service.getTS();
+    document.body.classList.add('bathroomBody');
+
 
   }
 }
