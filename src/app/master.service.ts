@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { TotalScore } from "./total-score";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: "root"
@@ -14,6 +15,8 @@ export class MasterService {
     charisma: 5,
     academia: 5
   };
+
+  private readonly BASE_URL = environment.playerBaseUrl
 
 
  
@@ -30,7 +33,9 @@ getTSname():string{
 
 // get score from service to  components
 getTSpopularity():number{
+  
   return this.totalScore.popularity;
+  // return this.http.get<Student[]>(`${this.BASE_URL}/students`)
 }
 
 getTScharisma():number{
@@ -70,5 +75,16 @@ this.totalScore.name=playerInfo
 // Get from data base
 
 // Push into data base
+updateDatabase(name,popularity,academic,charisma):Observable<void> {
+  const body = {
+    "name": name,
+    "popularity":popularity,
+    "academic":academic,
+    "charisma":charisma
+  };
+  return this.http.post<void>(`${this.BASE_URL}/player-info`, body);
+  // return this.http.get<Student[]>(`${this.BASE_URL}/students`)
+
+}
  
 }
