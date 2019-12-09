@@ -9,7 +9,8 @@ import { TotalScore } from '../total-score';
   styleUrls: ['./id6-gym.component.css']
 })
 export class Id6GymComponent implements OnInit {
-
+  score:any;
+  name:string;
   nextCounter: number = 0;
   hideDialogue: boolean = false;
   showOpt: boolean = false
@@ -53,13 +54,27 @@ export class Id6GymComponent implements OnInit {
     console.log(this.total)
   }
 
+  storePlayerData(){
+    this.score
+  }
+
 
   ngOnInit() {
-
+    this.name=this.service.getName()
     this.academia = this.service.getTSacademia();
     this.charisma = this.service.getTScharisma();
     this.popularity = this.service.getTSpopularity();
     this.total = this.service.getTS();
+    
+    this.service.updateDatabase(this.name,this.academia,this.charisma,this.popularity).subscribe(scores=>{
+      this.score=scores
+    });
+
+    // call the service, add .subscribe();
   }
 
 }
+// loadList() {
+//   this.studentApiService.getAllStudents().subscribe(students => {
+//     this.students = students;
+//   });
