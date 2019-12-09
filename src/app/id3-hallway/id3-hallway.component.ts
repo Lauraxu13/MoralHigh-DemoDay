@@ -10,17 +10,26 @@ export class Id3HallwayComponent implements OnInit {
   nextCounter: number = 0;
 
   showDialogue: boolean = false;
+  doAnimate: boolean = false;
 
-  constructor(private router: Router) {}
+
+  backgroundSrc = '/assets/Hallway.png';
+
+  constructor(private router: Router) { }
 
   nextButton() {
     this.nextCounter++;
     if (this.nextCounter <= 1) {
+      // applies the class of .animate
+      this.doAnimate = true;
       this.showDialogue = true;
     } else {
       this.router.navigate(["bathroom"]);
     }
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    document.body.classList.add('hallwayBody');
+  }
+
 }

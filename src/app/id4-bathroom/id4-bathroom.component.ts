@@ -9,27 +9,32 @@ import { Router } from '@angular/router';
 export class Id4BathroomComponent implements OnInit {
 
 
+  doAnimate: boolean = false;
 
   nextCounter: number = 0;
 
   hideDialogue: boolean = false;
-  showOpt:boolean=false
+  showOpt: boolean = false
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   nextButton() {
     this.nextCounter++;
-    if (this.nextCounter <= 1)  {
+    if (this.nextCounter <= 1) {
+      this.doAnimate = !this.doAnimate
       this.hideDialogue = true;
     }
     else {
-      this.showOpt =true
+      this.showOpt = true
     }
-     }
+  }
 
 
 
 
-  ngOnInit() {}
+  ngOnInit() {
+    document.body.classList.add('bathroomBody');
+
+  }
 }
 

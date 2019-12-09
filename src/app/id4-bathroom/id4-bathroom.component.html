@@ -1,16 +1,23 @@
-<p>id4-bathroom works!</p>
-
-<div class="bathroom1">
-
-<div class="dialogue"[ngClass]="{hide: hideDialogue}">
-Rude comment to mGirl from pGirl
-</div>
-<button class="next" (click)="nextButton()" >next</button>
+<div class="body">
 
 
-</div>
 
-<div class="bathroom2" [ngClass]="{show: showOpt}">
-<button class="opt1">Opt1</button>
-<button class="opt2">Opt2</button>
+    <div class="char main"><img src="/assets/moralhighmaincharacter.png"></div>
+
+
+    <div class="bathroom1">
+
+        <div class="dialogue" [ngClass]="{hide: hideDialogue}">
+            <p>Rude comment to mGirl from pGirl</p>
+        </div>
+        <button class="next" (click)="nextButton()">next</button>
+
+        <div class="char meanGirl"><img src="/assets/moralhighmeangirl.png"></div>
+
+    </div>
+
+    <div class="bathroom2" [ngClass]="{show: showOpt}">
+        <button class="opt1">Opt1</button>
+        <button class="opt2">Opt2</button>
+    </div>
 </div>
