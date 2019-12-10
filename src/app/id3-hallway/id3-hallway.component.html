@@ -1,20 +1,23 @@
 <div class="body">
-    <div class="content">
-
-        <div class="dialogue" [ngClass]="{one: !showDialogue}">
-            <p>Friend talking to mGirl</p>
-        </div>
-        <div class="char main"><img src="/assets/moralhighmaincharacter.png"></div>
-
-
-        <div class="dialogue two" [ngClass]="{two: showDialogue, animateDialogue: doAnimate}">
-            <p>mGirl telling Friend about summer reading</p>
-        </div>
-        <div class="char friend" [ngClass]="{animate: doAnimate}" *ngIf="doAnimate"><img
-                src="/assets/moralhighfriend.png"></div>
-
-
-        <button type="button" class="next" (click)="nextButton()">Next</button>
+  <div class="content">
+    <div class="dialogue" [ngClass]="{ one: !showDialogue }">
+      <p>Friend talking to mGirl</p>
+    </div>
+    <div class="char main">
+      <img src="/assets/moralhighmaincharacter.png" />
     </div>
 
+    <div class="dialogue two" [ngClass]="{ two: showDialogue }">
+      <p>mGirl telling Friend about summer reading</p>
+    </div>
+    <div
+      class="char friend"
+      [ngClass]="{ animate: doAnimate }"
+      *ngIf="doAnimate"
+    >
+      <img src="/assets/moralhighfriend.png" />
+    </div>
+
+    <button type="button" class="next" (click)="nextButton()">Next</button>
+  </div>
 </div>

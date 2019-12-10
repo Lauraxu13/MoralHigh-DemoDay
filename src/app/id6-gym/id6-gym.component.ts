@@ -47,12 +47,24 @@ export class Id6GymComponent implements OnInit {
     this.academia = this.academia - 1;
     this.service.setTSacademia(this.academia);
 
+    this.popularity = this.popularity -1;
+    this.service.setTSpopularity(this.popularity);
+
+    this.router.navigate(["score"]);
+    console.log(this.total)
+  }
+  opt3id6() {
+    this.academia = this.academia - 1;
+    this.service.setTSacademia(this.academia);
+
     this.popularity = this.popularity + 2;
     this.service.setTSpopularity(this.popularity);
 
     this.router.navigate(["score"]);
     console.log(this.total)
   }
+
+
 
   storePlayerData(){
     this.score
