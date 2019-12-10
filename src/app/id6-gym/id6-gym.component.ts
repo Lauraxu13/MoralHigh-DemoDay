@@ -64,24 +64,30 @@ export class Id6GymComponent implements OnInit {
     console.log(this.total)
   }
 
+<<<<<<< HEAD
+  
+  update(){
+    
+    
+    this.service.updateDatabase(this.name,this.academia,this.charisma,this.popularity).subscribe(scores=>{
+      this.score=scores
+    });
+=======
 
 
   storePlayerData(){
     this.score
+>>>>>>> d60521ca78750a1bf50bd6cac871581c0d802af6
   }
 
-
   ngOnInit() {
+    this.update();
+
     this.name=this.service.getName()
     this.academia = this.service.getTSacademia();
     this.charisma = this.service.getTScharisma();
     this.popularity = this.service.getTSpopularity();
     this.total = this.service.getTS();
-    
-    this.service.updateDatabase(this.name,this.academia,this.charisma,this.popularity).subscribe(scores=>{
-      this.score=scores
-    });
-
     // call the service, add .subscribe();
   }
 
