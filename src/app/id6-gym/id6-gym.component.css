@@ -94,3 +94,12 @@ img {
 .next.hide {
     display:none;
 }
+
+.noHelp{
+    display:none;
+}
+
+
+.helped{
+    display:initial;
+}

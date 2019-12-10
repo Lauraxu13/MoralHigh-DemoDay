@@ -1,132 +1,121 @@
 .body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0px;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
 }
 
 .content {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
 }
 
 .dialogue {
-    display:none;
-
-
+  display: none;
 }
 
 .dialogue p {
-    background-color: rgb(255, 255, 255, 0.8);
-    width: 100px;
-    height: auto;
-    padding: 20px 10px 20px 10px;
-    border-radius: 20%;
-
+  background-color: rgb(255, 255, 255, 0.8);
+  width: 100px;
+  height: auto;
+  padding: 20px 10px 20px 10px;
+  border-radius: 20%;
 }
 
 .dialogue.one {
-    display:initial;
-    position: absolute;
-    left: 10%;
-
+  display: initial;
+  position: absolute;
+  left: 10%;
 }
 .dialogue.two {
-    display:initial;
-    position: absolute;
-    left: 75%;
-
+  display: initial;
+  position: absolute;
+  left: 75%;
+  animation: 3s fadeIn;
+  animation-fill-mode: forwards;
 }
 
-.char{
-    height: 80%;
-    /* width: 2%; */
-    position: absolute;
-
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
-.main{
-    top: 18%;
-    left: 30%;
+.char {
+  height: 80%;
+  /* width: 2%; */
+  position: absolute;
 }
 
-.friend{
-    top: 15%;
-    left: 75%;
+.main {
+  top: 18%;
+  left: 30%;
 }
 
+.friend {
+  top: 15%;
+  left: 75%;
+}
 
 img {
-    height: auto;
-    /* width: 100%; */
-    height: 100%;
+  height: auto;
+  /* width: 100%; */
+  height: 100%;
 }
 
 /* determines the property for the animations */
 .animate {
-    animation: moved 3s ease-out forwards;
-   
+  animation: moved 3s ease-out forwards;
 }
 
-.animateDialogue {
-    animation-name: appear;
-    animation-delay: 4s;
-}
 
 /* "moved" relates the the .animate class */
 @keyframes moved {
-    0% {
-        transform: translateX(0%) rotate(-5deg);
-    }
-    10% {
-        transform: translateX(-10%) translateY(-2px) rotate(-5deg); 
-    }
+  0% {
+    transform: translateX(0%) rotate(-5deg);
+  }
+  10% {
+    transform: translateX(-10%) translateY(-2px) rotate(-5deg);
+  }
 
-    20% {
-        transform: translateX(-20%) translateY(-2px) rotate(5deg); 
-    }
-    30% {
-        transform: translateX(-35%) translateY(-2px) rotate(-5deg); 
-    }
-    45% {
-        transform: translateX(-50%) translateY(-2px) rotate(5deg); 
-    }
-    60% { 
-        transform: translateX(-70%) translateY(-2px) rotate(-5deg); 
-    }
+  20% {
+    transform: translateX(-20%) translateY(-2px) rotate(5deg);
+  }
+  30% {
+    transform: translateX(-35%) translateY(-2px) rotate(-5deg);
+  }
+  45% {
+    transform: translateX(-50%) translateY(-2px) rotate(5deg);
+  }
+  60% {
+    transform: translateX(-70%) translateY(-2px) rotate(-5deg);
+  }
 
-    75% {
-        transform: translateX(-90%) translateY(-2px) rotate(5deg); 
-    }
+  75% {
+    transform: translateX(-90%) translateY(-2px) rotate(5deg);
+  }
 
-    85% {
-        transform: translateX(-100%) translateY(-2px) rotate(-5deg); 
-    }
+  85% {
+    transform: translateX(-100%) translateY(-2px) rotate(-5deg);
+  }
 
-    100% {
-        transform: translateX(-110%) translateY(0px);
-    }
-};
-
-
-@keyframes appear {
-    0% {
-        opacity: 0;
-        transform: rotate(100deg);
-    }
-        100% {
-        opacity: 1;
-        transform: rotate(100deg);
-    }
+  100% {
+    transform: translateX(-110%) translateY(0px);
+  }
 }
 
-
 button {
-    background-color: white;
-    position: absolute;
-    top: 300px;
-    left: 550px;
-    padding: 10px 20px 10px 20px;
-    border-radius: 10px;
+  background-color: white;
+  position: absolute;
+  top: 300px;
+  left: 550px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
 }
