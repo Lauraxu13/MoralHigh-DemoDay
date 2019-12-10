@@ -75,7 +75,7 @@ this.totalScore.name=playerInfo
 // Get from data base
 
 // Push into data base
-updateDatabase(name,popularity,academic,charisma):Observable<void> {
+updateDatabase(name:string,popularity:number,academic:number,charisma:number):Observable<void> {
   const body = {
     "name": name,
     "popularity":popularity,

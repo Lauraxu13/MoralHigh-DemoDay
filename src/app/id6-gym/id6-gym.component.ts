@@ -38,6 +38,7 @@ export class Id6GymComponent implements OnInit {
 
     this.charisma = this.charisma + 1;
     this.service.setTScharisma(this.charisma);
+    this.update();
 
     this.router.navigate(["score"]);
 
@@ -49,6 +50,7 @@ export class Id6GymComponent implements OnInit {
 
     this.popularity = this.popularity -1;
     this.service.setTSpopularity(this.popularity);
+    this.update();
 
     this.router.navigate(["score"]);
     console.log(this.total)
@@ -59,6 +61,7 @@ export class Id6GymComponent implements OnInit {
 
     this.popularity = this.popularity + 2;
     this.service.setTSpopularity(this.popularity);
+    this.update();
 
     this.router.navigate(["score"]);
     console.log(this.total)
@@ -66,16 +69,14 @@ export class Id6GymComponent implements OnInit {
 
   
   update(){
-    
-    
-    this.service.updateDatabase(this.name,this.academia,this.charisma,this.popularity).subscribe(scores=>{
+      this.service.updateDatabase(this.name,this.academia,this.charisma,this.popularity).subscribe(scores=>{
       this.score=scores
     });
   }
 
   ngOnInit() {
     document.body.classList.add('gymBody');
-    this.update();
+
 
     this.name=this.service.getName()
     this.academia = this.service.getTSacademia();
