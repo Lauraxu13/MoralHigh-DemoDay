@@ -19,9 +19,30 @@ export class Id4BathroomComponent implements OnInit {
   charisma: number;
   total: TotalScore;
   flip: boolean= true;
+  seconds:number =6;
   
 
   constructor(private router: Router, private service: MasterService) { }
+
+countDown():any{
+  this.seconds =this.seconds -1
+    if (this.seconds < 0){
+      this.popularity = this.popularity - 1
+    this.service.setTSpopularity(this.popularity)
+
+    this.charisma = this.charisma - 2
+    this.service.setTScharisma(this.charisma)
+
+    this.router.navigate(["homework"]);
+    console.log(this.popularity)
+
+  } else{
+    setTimeout(() => {
+      this.countDown();
+    },1000);
+  }
+};
+
 
   nextButton() {
     this.nextCounter++;
@@ -31,6 +52,7 @@ export class Id4BathroomComponent implements OnInit {
       this.doAnimate = true;
     } else {
       this.showOpt = !this.showOpt;
+      this.countDown();
     }
   }
 

@@ -26,7 +26,7 @@ export class Id5HomeworkDueComponent implements OnInit {
       this.showOpt = true;
 
     }
-    console.log(this.nextCounter)
+    
   }
 
   opt1id5() {

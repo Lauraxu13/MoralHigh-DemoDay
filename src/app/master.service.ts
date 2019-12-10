@@ -80,9 +80,6 @@ export class MasterService {
 
 
 
-
-
-
   constructor(private http: HttpClient) { }
   // set name from home page form to service
   setTSname(newInfo: string) {
@@ -135,6 +132,22 @@ export class MasterService {
   }
 
 
+  // Get from data base
+
+  // Push into data base
+  updateDatabase(name: string, popularity: number, academic: number, charisma: number): Observable<void> {
+    const body = {
+      "name": name,
+      "popularity": popularity,
+      "academic": academic,
+      "charisma": charisma
+    };
+    return this.http.post<void>(`${this.BASE_URL}/player-info`, body);
+    // return this.http.get<Student[]>(`${this.BASE_URL}/students`)
+
+  }
+
+
   getBody(): any[] {
     return this.body;
   }
@@ -162,19 +175,4 @@ export class MasterService {
   setCharacter(character: string[]) {
     this.character = character;
   }
-  // Get from data base
-
-  // Push into data base
-  updateDatabase(name, popularity, academic, charisma): Observable<void> {
-    const body = {
-      "name": name,
-      "popularity": popularity,
-      "academic": academic,
-      "charisma": charisma
-    };
-    return this.http.post<void>(`${this.BASE_URL}/player-info`, body);
-    // return this.http.get<Student[]>(`${this.BASE_URL}/students`)
-
-  }
-
 }
