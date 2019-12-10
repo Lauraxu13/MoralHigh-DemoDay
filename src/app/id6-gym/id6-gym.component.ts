@@ -64,7 +64,6 @@ export class Id6GymComponent implements OnInit {
     console.log(this.total)
   }
 
-<<<<<<< HEAD
   
   update(){
     
@@ -72,15 +71,10 @@ export class Id6GymComponent implements OnInit {
     this.service.updateDatabase(this.name,this.academia,this.charisma,this.popularity).subscribe(scores=>{
       this.score=scores
     });
-=======
-
-
-  storePlayerData(){
-    this.score
->>>>>>> d60521ca78750a1bf50bd6cac871581c0d802af6
   }
 
   ngOnInit() {
+    document.body.classList.add('gymBody');
     this.update();
 
     this.name=this.service.getName()
