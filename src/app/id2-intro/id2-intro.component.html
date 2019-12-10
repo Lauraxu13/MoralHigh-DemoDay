@@ -1,11 +1,35 @@
-<div class="body">
-  <div class="char"><img src="/assets/moralhighmaincharacter.png" /></div>
+<div class="intro">
+  <h1>Welcome to Moral High School!</h1>
 
-  <div class="intro">
-    <h1>Welcome to Moral High School!</h1>
+  <p>Meet {{name}}</p>
+  <button class="next" (click)="nextButton()">next</button>
 
-    <p>Meet {{name}}</p>
-
-    <button class="next" (click)="nextButton()">next</button>
+  <div class="completeCharacter">
+    <div class="characterParts" *ngFor="let part of character; index as i" [style.background-image]="part">
+    </div>
   </div>
+
+
+
+  <div class="parts">
+    <div class="character" *ngFor="let part of body; index as i" [style.background-image]="part.prev"
+      (click)="setBody(i)">
+    </div>
+
+    <div class="character" *ngFor="let part of eye; index as i" [style.background-image]="part.prev"
+      (click)="setEye(i)">
+    </div>
+    <div class="character" *ngFor="let part of hair; index as i" [style.background-image]="part.prev"
+      (click)="setHair(i)">
+    </div>
+    <div class="character" *ngFor="let part of bottom; index as i" [style.background-image]="part.prev"
+      (click)="setBottom(i)">
+    </div>
+    <div class="character" *ngFor="let part of top; index as i" [style.background-image]="part.prev"
+      (click)="setTop(i)">
+    </div>
+  </div>
+
+
+
 </div>

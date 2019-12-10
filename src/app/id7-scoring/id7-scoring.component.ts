@@ -22,6 +22,7 @@ export class Id7ScoringComponent implements OnInit {
 
   ngOnInit() {
     this.total = this.service.getTS();
+    console.log(this.total)
   }
 
 }

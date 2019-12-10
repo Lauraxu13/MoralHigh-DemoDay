@@ -9,8 +9,8 @@ import { TotalScore } from '../total-score';
   styleUrls: ['./id6-gym.component.css']
 })
 export class Id6GymComponent implements OnInit {
-  score:any;
-  name:string;
+  score: any;
+  name: string;
   nextCounter: number = 0;
   hideDialogue: boolean = false;
   showOpt: boolean = false
@@ -38,7 +38,9 @@ export class Id6GymComponent implements OnInit {
 
     this.charisma = this.charisma + 1;
     this.service.setTScharisma(this.charisma);
-
+    this.service.updateDatabase(this.name, this.academia, this.charisma, this.popularity).subscribe(scores => {
+      this.score = scores
+    });
     this.router.navigate(["score"]);
 
     console.log(this.total)
@@ -49,26 +51,27 @@ export class Id6GymComponent implements OnInit {
 
     this.popularity = this.popularity + 2;
     this.service.setTSpopularity(this.popularity);
-
+    this.service.updateDatabase(this.name, this.academia, this.charisma, this.popularity).subscribe(scores => {
+      this.score = scores
+    });
     this.router.navigate(["score"]);
     console.log(this.total)
   }
 
-  storePlayerData(){
+  storePlayerData() {
     this.score
   }
 
 
   ngOnInit() {
-    this.name=this.service.getName()
+    this.name = this.service.getName()
     this.academia = this.service.getTSacademia();
     this.charisma = this.service.getTScharisma();
     this.popularity = this.service.getTSpopularity();
     this.total = this.service.getTS();
-    
-    this.service.updateDatabase(this.name,this.academia,this.charisma,this.popularity).subscribe(scores=>{
-      this.score=scores
-    });
+    document.body.classList.add('gymBody');
+
+
 
     // call the service, add .subscribe();
   }

@@ -19,7 +19,7 @@
 .char.meanGirl {
     height: 90%;
     top: 10%;
-    left: 70%;
+    left: 68%;
 }
 
 img {
@@ -44,17 +44,17 @@ img {
 
 .bathroom2 > p {
 margin: 0 auto;
-margin-top: 10%;
+margin-top: 5%;
 font-size: 20px;
 background-color: rgb(255, 255, 255, 0.8);
 border-radius: 20px;
-padding: 50px;
+padding: 20px;
 }
 
 
-.bathroom2 button {
+.bathroom2 > button {
     width: 50%;
-    height: 10%;
+    height: 10%;       
     margin: 0 auto;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -89,8 +89,8 @@ padding: 50px;
 .next {
     background-color: white;
     position: absolute;
-    top: 300px;
-    left: 700px;
+    top: 80%;
+    left: 88%;
     padding: 10px 20px 10px 20px;
     border-radius: 10px;
 }
