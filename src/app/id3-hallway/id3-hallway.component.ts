@@ -12,6 +12,7 @@ export class Id3HallwayComponent implements OnInit {
 
   showDialogue: boolean = false;
   doAnimate: boolean = false;
+  name: string;
 
   character: string[] = [];
 
@@ -33,7 +34,7 @@ export class Id3HallwayComponent implements OnInit {
   ngOnInit() {
     document.body.classList.add('hallwayBody');
     this.character = this.service.getCharacter();
-
+    this.name = this.service.getName();
   }
 
 }

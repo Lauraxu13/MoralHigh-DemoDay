@@ -8,12 +8,12 @@ import { MasterService } from '../master.service';
   styleUrls: ['./id8-leaderboard.component.css']
 })
 export class Id8LeaderboardComponent implements OnInit {
-  leaderBroard:[];
+  leaderBoard:[];
   constructor(private router: Router, private service: MasterService) { }
 
   ngOnInit() {
     this.service.getLeaderBoard().subscribe(leaderBoard=>{
-        this.leaderBroard=leaderBoard
+        this.leaderBoard=leaderBoard
     });
   }
 

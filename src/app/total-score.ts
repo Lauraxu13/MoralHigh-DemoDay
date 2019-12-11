@@ -6,7 +6,8 @@ export interface TotalScore {
     bully: number;
     nerd: number;
     jock: number;
-
     personality: string;
+    
+
 
 }
