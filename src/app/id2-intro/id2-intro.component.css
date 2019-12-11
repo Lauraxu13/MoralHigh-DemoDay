@@ -1,9 +1,10 @@
-/* 
+
 body {
     display: flex;
+    justify-content: space-between;
 }
 
-*/
+
 
 .intro {
     width: 50%;
@@ -85,6 +86,7 @@ h3 {
  }
  
  .right{
+  
      width: 50%;
      height: auto;
  }

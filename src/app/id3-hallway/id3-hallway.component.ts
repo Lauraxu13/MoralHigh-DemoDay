@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { MasterService } from '../master.service';
 
 @Component({
   selector: "app-id3-hallway",
@@ -11,11 +12,11 @@ export class Id3HallwayComponent implements OnInit {
 
   showDialogue: boolean = false;
   doAnimate: boolean = false;
-
+name:string;
 
   backgroundSrc = '/assets/Hallway.png';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private service:MasterService) { }
 
   nextButton() {
     this.nextCounter++;
@@ -29,7 +30,9 @@ export class Id3HallwayComponent implements OnInit {
   }
 
   ngOnInit() {
-    document.body.classList.add('hallwayBody');
-  }
+        document.body.classList.add('hallwayBody');
+  
+        this.name = this.service.getName();
+      }
 
 }

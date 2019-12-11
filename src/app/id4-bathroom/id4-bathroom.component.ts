@@ -18,7 +18,7 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
   total: TotalScore;
   totalOnInit: TotalScore;
   flip: boolean = true;
-  seconds: number = 6;
+  seconds: number = 8;
   private timer: any;
 
 

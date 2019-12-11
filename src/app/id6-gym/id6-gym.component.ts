@@ -15,7 +15,7 @@ export class Id6GymComponent implements OnInit {
   showOpt: boolean = false
   total: TotalScore;
   personality: string;
-  
+  name: string;
 
 
 
@@ -83,6 +83,7 @@ export class Id6GymComponent implements OnInit {
     document.body.classList.add('gymBody');
     this.name = this.service.getName()
     this.total = this.service.getTS();
+    this.name = this.service.getName();
     // call the service, add .subscribe();
   }
 }

@@ -1,24 +1,34 @@
 <div class="body">
+  <div class="char main"><img src="/assets/moralhighmaincharacter.png" /></div>
 
-
-
-    <div class="char main"><img src="/assets/moralhighmaincharacter.png"></div>
-
-
-    <div class="bathroom1" [ngClass]="{show: !showOpt}">
-
-        <div class="dialogue" [ngClass]="{hide: hideDialogue}">
-            <p>Rude comment to mGirl from pGirl</p>
-        </div>
-        <button class="next" (click)="nextButton()">next</button>
-
-        <div class="char meanGirl" ><img [ngClass]="{flip:!flip}" src="/assets/moralhighmeangirl.png"> <img [ngClass]="{animate: doAnimate}" *ngIf="doAnimate" [ngClass]="{flip:flip}" src="/assets/moralhighmeangirlTP.png"></div>
-
-
+  <div class="bathroom1" [ngClass]="{ show: !showOpt }">
+    <div class="dialogue" [ngClass]="{ hide: hideDialogue }">
+      <p>
+        I cant believe they let losers like you into Moral High you better stay
+        out of my way
+      </p>
     </div>
+    <button class="next" (click)="nextButton()">next</button>
 
-    <div class="bathroom2" [ngClass]="{show:showOpt}">
-        <p>What will you do? {{seconds}} </p>
-        <button class="opt1" (click)="opt1id4()">Tell heather about the toilet paper sticking out of her skirt</button>
-        <button class="opt2" (click)="opt2id4()">Dont say anything</button>
+    <div class="char meanGirl">
+      <img [ngClass]="{ flip: !flip }" src="/assets/moralhighmeangirl.png" />
+      <img
+        [ngClass]="{ animate: doAnimate }"
+        *ngIf="doAnimate"
+        [ngClass]="{ flip: flip }"
+        src="/assets/moralhighmeangirlTP.png"
+      />
     </div>
+  </div>
+
+  <div class="bathroom2" [ngClass]="{ show: showOpt }">
+    <p>
+      OMG! Should I tell Heather about the toilet paper?! What will you do?
+      {{ seconds }}
+    </p>
+    <button class="opt1" (click)="opt1id4()">
+      Tell heather before she leaves the Bathroom
+    </button>
+    <button class="opt2" (click)="opt2id4()">No way! She is so mean!</button>
+  </div>
+</div>

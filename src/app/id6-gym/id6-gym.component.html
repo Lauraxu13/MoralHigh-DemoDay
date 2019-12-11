@@ -11,12 +11,12 @@
 
         <!-- if you saved pGirl in Bathroom -->
         <div class="dialogue" [ngClass]="{hide: hideDialogue, helped: total.popular >= 1}">
-            <p>Popular girl asks you to skip gym</p>
+            <p>Hey {{name}} the girls and I are ditching Gym to go hang out back with some of the senior guys. Wanna join?</p>
         </div>
 
         <!-- if you did not tell pGirl about Bathroom -->
         <div class="dialogue" [ngClass]="{hide: hideDialogue, helped:total.popular <1}">
-            <p>Makes fun of mGirl rude comment taunt</p>
+            <p>Hey {{name}}, I know you let me leave the bathroom with that toliet paper. Your not going to get away with it you FREAK.</p>
         </div>
         <button class="next"  (click)="nextButton()">next</button>
 
@@ -25,8 +25,8 @@
     </div>
 
     <div class="gym2" [ngClass]="{show: !showOpt}">
-        <button class="opt1" (click)="opt1id6()">Don't skip Gym</button>
-        <button class="opt2" (click)="opt2id6()">Skip gym to study</button>
+        <button class="opt1" (click)="opt1id6()">Go to Gym Class</button>
+        <button class="opt2" (click)="opt2id6()">Skip gym to Study</button>
         <button class="opt3" (click)="opt3id6()" [ngClass]="{hide: hideDialogue, helped: total.popular >= 1}">Skip
             Gym to Be with
             Heather</button>
