@@ -12,11 +12,12 @@ export class Id7ScoringComponent implements OnInit {
 
 
   total: TotalScore;
-
+  scores: any[];
+  highScore: number;
 
   constructor(private router: Router, private service: MasterService) { }
 
-  next(){
+  next() {
     this.router.navigate(["leaderboard"]);
   }
 
@@ -24,6 +25,11 @@ export class Id7ScoringComponent implements OnInit {
   ngOnInit() {
     this.total = this.service.getTS();
     console.log(this.total)
+    this.scores = this.service.calculatePersonality();
+    this.total.personality = this.service.totalScore.personality;
+    this.highScore = this.service.highScore;
+    document.body.classList.add('scoresBody');
+
   }
 
 }
