@@ -178,4 +178,8 @@ export class MasterService {
   setCharacter(character: string[]) {
     this.character = character;
   }
+
+  getLeaderBoard(): Observable<any>{
+   return this.http.get(`${this.BASE_URL}/player-info`)
+  }
 }
