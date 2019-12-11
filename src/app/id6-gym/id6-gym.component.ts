@@ -11,10 +11,11 @@ export class Id6GymComponent implements OnInit {
   score: any;
   name: string;
   nextCounter: number = 0;
-  hideDialogue: boolean = false;
+  hideDialogue: boolean = true;
   showOpt: boolean = false
   total: TotalScore;
   personality: string;
+  
 
   popularity: string = "";
   charisma: string = "";
