@@ -33,7 +33,7 @@ export class Id5HomeworkDueComponent implements OnInit {
     this.service.setTSacademia(this.total.nerd, this.total.jock);
 
     this.total.nice = this.total.nice + 1;
-    this.total.nerd = this.total.bully - 1;
+    this.total.bully = this.total.bully - 1;
     this.service.setTScharisma(this.total.nice, this.total.bully);
 
     this.router.navigate(["gym"]);
@@ -46,7 +46,7 @@ export class Id5HomeworkDueComponent implements OnInit {
     this.service.setTSacademia(this.total.nerd, this.total.jock);
 
     this.total.nice = this.total.nice - 1;
-    this.total.nerd = this.total.bully + 1;
+    this.total.bully = this.total.bully + 1;
     this.service.setTScharisma(this.total.nice, this.total.bully);
 
     this.router.navigate(["gym"]);

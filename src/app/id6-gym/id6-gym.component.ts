@@ -14,7 +14,14 @@ export class Id6GymComponent implements OnInit {
   hideDialogue: boolean = true;
   showOpt: boolean = false;
   total: TotalScore;
-  personality: string;
+  popular: number;
+    unpopular: number;
+    nice: number;
+    bully: number;
+    nerd: number;
+    jock: number;
+    personality: string;
+
 
   constructor(private router: Router, private service: MasterService) {}
   nextButton() {
@@ -34,8 +41,8 @@ export class Id6GymComponent implements OnInit {
     this.total.unpopular = this.total.popular - 1;
     this.service.setTSpopularity(this.total.popular, this.total.unpopular);
 
-    // // send updates to database
-    // this.update();
+    //send updates to database
+    this.update();
     this.router.navigate(["score"]);
     console.log(this.total);
   }
@@ -47,8 +54,8 @@ export class Id6GymComponent implements OnInit {
     this.total.popular = this.total.popular - 1;
     this.total.unpopular = this.total.popular + 1;
     this.service.setTSpopularity(this.total.popular, this.total.unpopular);
-    // // send updates to database
-    // this.update();
+    // send updates to database
+    this.update();
     this.router.navigate(["score"]);
     console.log(this.total);
   }
@@ -62,17 +69,17 @@ export class Id6GymComponent implements OnInit {
     this.total.unpopular = this.total.popular - 2;
     this.service.setTSpopularity(this.total.popular, this.total.unpopular);
 
-    // // send updates to database
-    // this.update();
+    // send updates to database
+    this.update();
     this.router.navigate(["score"]);
     console.log(this.total);
   }
 
-  // update() {
-  //   this.service.updateDatabase(this.name, this.academia, this.charisma, this.popularity, this.personality).subscribe(scores => {
-  //     this.score = scores
-  //   });
-
+  update() {
+    this.service.updateDatabase(this.name, this.unpopular, this.nice, this.popular, this.personality,this.nerd,this.jock,this.bully).subscribe(scores => {
+      this.score = scores
+    });
+  }
   ngOnInit() {
     document.body.classList.add("gymBody");
     this.name = this.service.getName();
@@ -81,7 +88,5 @@ export class Id6GymComponent implements OnInit {
     // call the service, add .subscribe();
   }
 }
-// loadList() {
-//   this.studentApiService.getAllStudents().subscribe(students => {
-//     this.students = students;
-//   });
+
+
