@@ -1,34 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { MasterService } from '../master.service';
-import { TotalScore } from '../total-score';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { MasterService } from "../master.service";
+import { TotalScore } from "../total-score";
 @Component({
-  selector: 'app-id6-gym',
-  templateUrl: './id6-gym.component.html',
-  styleUrls: ['./id6-gym.component.css']
+  selector: "app-id6-gym",
+  templateUrl: "./id6-gym.component.html",
+  styleUrls: ["./id6-gym.component.css"]
 })
 export class Id6GymComponent implements OnInit {
   score: any;
   name: string;
   nextCounter: number = 0;
   hideDialogue: boolean = true;
-  showOpt: boolean = false
+  showOpt: boolean = false;
   total: TotalScore;
   personality: string;
-  name: string;
 
-  popularity: string = "";
-  charisma: string = "";
-  academia: string = "";
-
-  constructor(private router: Router, private service: MasterService) { }
+  constructor(private router: Router, private service: MasterService) {}
   nextButton() {
     this.nextCounter++;
     if (this.nextCounter <= 1) {
       this.hideDialogue = true;
       this.showOpt = true;
     }
-    console.log(this.nextCounter)
+    console.log(this.nextCounter);
   }
   opt1id6() {
     this.total.nerd = this.total.nerd - 2;
@@ -42,7 +37,7 @@ export class Id6GymComponent implements OnInit {
     // // send updates to database
     // this.update();
     this.router.navigate(["score"]);
-    console.log(this.total)
+    console.log(this.total);
   }
   opt2id6() {
     this.total.nerd = this.total.nerd + 2;
@@ -55,9 +50,8 @@ export class Id6GymComponent implements OnInit {
     // // send updates to database
     // this.update();
     this.router.navigate(["score"]);
-    console.log(this.total)
+    console.log(this.total);
   }
-
 
   opt3id6() {
     this.total.nerd = this.total.nerd - 1;
@@ -71,7 +65,7 @@ export class Id6GymComponent implements OnInit {
     // // send updates to database
     // this.update();
     this.router.navigate(["score"]);
-    console.log(this.total)
+    console.log(this.total);
   }
 
   // update() {
@@ -79,11 +73,9 @@ export class Id6GymComponent implements OnInit {
   //     this.score = scores
   //   });
 
-
-
   ngOnInit() {
-    document.body.classList.add('gymBody');
-    this.name = this.service.getName()
+    document.body.classList.add("gymBody");
+    this.name = this.service.getName();
     this.total = this.service.getTS();
     this.name = this.service.getName();
     // call the service, add .subscribe();
