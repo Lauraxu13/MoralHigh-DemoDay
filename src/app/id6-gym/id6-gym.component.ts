@@ -17,6 +17,7 @@ export class Id6GymComponent implements OnInit {
   charisma: number;
   popularity: number;
   total: TotalScore;
+  personality: string;
   constructor(private router: Router, private service: MasterService) { }
   nextButton() {
     this.nextCounter++;
@@ -55,7 +56,7 @@ export class Id6GymComponent implements OnInit {
   }
 
   update() {
-    this.service.updateDatabase(this.name, this.academia, this.charisma, this.popularity).subscribe(scores => {
+    this.service.updateDatabase(this.name, this.academia, this.charisma, this.popularity,this.personality).subscribe(scores => {
       this.score = scores
     });
   }

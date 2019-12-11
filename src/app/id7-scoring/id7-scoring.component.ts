@@ -16,8 +16,9 @@ export class Id7ScoringComponent implements OnInit {
 
   constructor(private router: Router, private service: MasterService) { }
 
-
-
+  next(){
+    this.router.navigate(["leaderboard"]);
+  }
 
 
   ngOnInit() {

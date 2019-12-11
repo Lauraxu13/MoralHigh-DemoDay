@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LeaderboardComponent } from './leaderboard.component';
+import { Id8LeaderboardComponent } from './id8-leaderboard.component';
 
-describe('LeaderboardComponent', () => {
-  let component: LeaderboardComponent;
-  let fixture: ComponentFixture<LeaderboardComponent>;
+describe('Id8LeaderboardComponent', () => {
+  let component: Id8LeaderboardComponent;
+  let fixture: ComponentFixture<Id8LeaderboardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LeaderboardComponent ]
+      declarations: [ Id8LeaderboardComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LeaderboardComponent);
+    fixture = TestBed.createComponent(Id8LeaderboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
