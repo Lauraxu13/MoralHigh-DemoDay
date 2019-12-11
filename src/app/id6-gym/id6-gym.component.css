@@ -9,6 +9,10 @@
     display: none
 }
 
+.opt3.hide {
+    display: none;
+}
+
 .dialogue > p {
     background-color: rgb(255, 255, 255, 0.8);
     width: 100px;
@@ -95,11 +99,10 @@ img {
     display:none;
 }
 
-/* .noHelp{
-    display:none;
-} */
-
-
-.helped{
+.dialogue.hide.helped{
     display:initial;
+}
+
+.opt3.hide.helped{
+    display: initial;
 }
