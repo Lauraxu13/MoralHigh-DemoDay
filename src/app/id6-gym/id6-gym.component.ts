@@ -13,10 +13,11 @@ export class Id6GymComponent implements OnInit {
   nextCounter: number = 0;
   hideDialogue: boolean = false;
   showOpt: boolean = false
-  academia: number;
-  charisma: number;
-  popularity: number;
   total: TotalScore;
+  personality: string;
+
+
+
   constructor(private router: Router, private service: MasterService) { }
   nextButton() {
     this.nextCounter++;
@@ -27,44 +28,59 @@ export class Id6GymComponent implements OnInit {
     console.log(this.nextCounter)
   }
   opt1id6() {
-    this.academia = this.academia - 2;
-    this.service.setTSacademia(this.academia);
-    this.charisma = this.charisma + 1;
-    this.service.setTScharisma(this.charisma);
-    this.update();
+    this.total.nerd = this.total.nerd - 2;
+    this.total.jock = this.total.jock + 2;
+    this.service.setTSacademia(this.total.nerd, this.total.jock);
+
+    this.total.popular = this.total.popular + 1;
+    this.total.unpopular = this.total.popular - 1;
+    this.service.setTSpopularity(this.total.popular, this.total.unpopular);
+
+    // // send updates to database
+    // this.update();
     this.router.navigate(["score"]);
     console.log(this.total)
   }
   opt2id6() {
-    this.academia = this.academia - 1;
-    this.service.setTSacademia(this.academia);
-    this.popularity = this.popularity - 1;
-    this.service.setTSpopularity(this.popularity);
-    this.update();
-    this.router.navigate(["score"]);
-    console.log(this.total)
-  }
-  opt3id6() {
-    this.academia = this.academia - 1;
-    this.service.setTSacademia(this.academia);
-    this.popularity = this.popularity + 2;
-    this.service.setTSpopularity(this.popularity);
-    this.update();
+    this.total.nerd = this.total.nerd + 2;
+    this.total.jock = this.total.jock - 2;
+    this.service.setTSacademia(this.total.nerd, this.total.jock);
+
+    this.total.popular = this.total.popular - 1;
+    this.total.unpopular = this.total.popular + 1;
+    this.service.setTSpopularity(this.total.popular, this.total.unpopular);
+    // // send updates to database
+    // this.update();
     this.router.navigate(["score"]);
     console.log(this.total)
   }
 
-  update() {
-    this.service.updateDatabase(this.name, this.academia, this.charisma, this.popularity).subscribe(scores => {
-      this.score = scores
-    });
+
+  opt3id6() {
+    this.total.nerd = this.total.nerd - 1;
+    this.total.jock = this.total.jock - 1;
+    this.service.setTSacademia(this.total.nerd, this.total.jock);
+
+    this.total.popular = this.total.popular + 2;
+    this.total.unpopular = this.total.popular - 2;
+    this.service.setTSpopularity(this.total.popular, this.total.unpopular);
+
+    // // send updates to database
+    // this.update();
+    this.router.navigate(["score"]);
+    console.log(this.total)
   }
+
+  // update() {
+  //   this.service.updateDatabase(this.name, this.academia, this.charisma, this.popularity, this.personality).subscribe(scores => {
+  //     this.score = scores
+  //   });
+
+
+
   ngOnInit() {
     document.body.classList.add('gymBody');
     this.name = this.service.getName()
-    this.academia = this.service.getTSacademia();
-    this.charisma = this.service.getTScharisma();
-    this.popularity = this.service.getTSpopularity();
     this.total = this.service.getTS();
     // call the service, add .subscribe();
   }

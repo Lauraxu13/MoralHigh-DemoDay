@@ -11,11 +11,14 @@ export class MasterService {
   // Master Empty Array
   totalScore: TotalScore = {
     name: "",
-    popularity: 5,
-    charisma: 5,
-    academia: 5,
+    popular: 0,
+    unpopular: 0,
+    nice: 0,
+    bully: 0,
+    jock: 0,
+    nerd: 0,
     personality: ""
-    
+
   };
 
 
@@ -93,31 +96,35 @@ export class MasterService {
     return this.totalScore.name;
   }
 
-  // get score from service to  components
-  getTSpopularity(): number {
+  // // get score from service to  components
+  // getTSpopularity(): number {
 
-    return this.totalScore.popularity;
-    // return this.http.get<Student[]>(`${this.BASE_URL}/students`)
-  }
+  //   return this.totalScore.popularity;
+  //   // return this.http.get<Student[]>(`${this.BASE_URL}/students`)
+  // }
 
-  getTScharisma(): number {
-    return this.totalScore.charisma;
-  }
+  // getTScharisma(): number {
+  //   return this.totalScore.charisma;
+  // }
 
-  getTSacademia(): number {
-    return this.totalScore.academia;
-  }
+  // getTSacademia(): number {
+  //   return this.totalScore.academia;
+  // }
   // set score from options to service array
-  setTSpopularity(newInfo: number) {
-    this.totalScore.popularity = newInfo;
+  setTSpopularity(popular: number, unpopular: number) {
+    this.totalScore.popular = popular;
+    this.totalScore.unpopular = unpopular;
+
   }
 
-  setTScharisma(newInfo: number) {
-    this.totalScore.charisma = newInfo;
+  setTScharisma(nice: number, bully: number) {
+    this.totalScore.nice = nice;
+    this.totalScore.bully = bully;
   }
 
-  setTSacademia(newInfo: number) {
-    this.totalScore.academia = newInfo;
+  setTSacademia(nerd: number, jock: number) {
+    this.totalScore.nerd = nerd;
+    this.totalScore.jock = jock;
   }
 
   // get score from serice to Score page
@@ -134,10 +141,18 @@ export class MasterService {
   }
 
 
+  calculatePersonality() {
+    // is popularity > academic and charisma?
+
+    // is academic > popularity and charisma?
+
+    // is charisma > academic and popularity?
+  }
+
   // Get from data base
 
   // Push into data base
-  updateDatabase(name: string, popularity: number, academic: number, charisma: number, personality:string): Observable<void> {
+  updateDatabase(name: string, popularity: number, academic: number, charisma: number, personality: string): Observable<void> {
     const body = {
       "name": name,
       "popularity": popularity,
