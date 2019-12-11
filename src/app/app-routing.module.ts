@@ -7,6 +7,7 @@ import { Id4BathroomComponent } from './id4-bathroom/id4-bathroom.component';
 import { Id5HomeworkDueComponent } from './id5-homework-due/id5-homework-due.component';
 import { Id6GymComponent } from './id6-gym/id6-gym.component';
 import { Id7ScoringComponent } from './id7-scoring/id7-scoring.component';
+import { Id8LeaderboardComponent } from './id8-leaderboard/id8-leaderboard.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: "homework" , component: Id5HomeworkDueComponent },
   {path: "gym" , component: Id6GymComponent },
   {path: "score" , component: Id7ScoringComponent },
+  {path:"leaderboard",component:Id8LeaderboardComponent},
   {path: "", redirectTo: "/home", pathMatch: "full" }
 ];
 
