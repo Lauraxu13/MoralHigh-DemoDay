@@ -13,7 +13,9 @@ export class MasterService {
     name: "",
     popularity: 5,
     charisma: 5,
-    academia: 5
+    academia: 5,
+    personality: ""
+    
   };
 
 
@@ -135,12 +137,13 @@ export class MasterService {
   // Get from data base
 
   // Push into data base
-  updateDatabase(name: string, popularity: number, academic: number, charisma: number): Observable<void> {
+  updateDatabase(name: string, popularity: number, academic: number, charisma: number, personality:string): Observable<void> {
     const body = {
       "name": name,
       "popularity": popularity,
       "academic": academic,
-      "charisma": charisma
+      "charisma": charisma,
+      "personality": personality
     };
     return this.http.post<void>(`${this.BASE_URL}/player-info`, body);
     // return this.http.get<Student[]>(`${this.BASE_URL}/students`)

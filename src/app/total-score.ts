@@ -3,5 +3,6 @@ export interface TotalScore {
     popularity: number;
     charisma: number;
     academia: number;
+    personality: string;
 
 }
