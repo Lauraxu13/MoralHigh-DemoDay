@@ -7,15 +7,24 @@
 
 .char{
     height: 60%;
-
     position: absolute;
 }
-
-.main{
-    top: 25%;
-    left: 25%;
+/* .mainCharacter {
+    height: 100%;
+    width: 20%;
+    
+} */
+.characterParts {
+    top: 20%;
+    left: 20%;
+    position: absolute;
+    height: 60%;
+    width: 20%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain    ;
+    z-index: 5;
 }
-
 .char.meanGirl {
     height: 90%;
     top: 10%;
@@ -33,7 +42,7 @@ img {
 
 .bathroom2{
     position: absolute;
-    z-index: 10;
+    z-index: 20;
     width: 100vw;
     height: 100vh;
     background-color: rgb(128, 128, 128, 0.6);

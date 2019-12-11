@@ -10,10 +10,18 @@
     position: absolute;
 }
 
-.main{
-    top: 18%;
-    left: 60%;
-}
+.characterParts {
+    top: 10%;
+    left: 65%;
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain    ;
+    z-index: 5;
+  }
+  
 
 .teacher{
     top: 15%;
@@ -46,7 +54,7 @@ img {
 
 .hw2 {
         position: absolute;
-        z-index: 10;
+        z-index:10;
         width: 100vw;
         height: 100vh;
         background-color: rgb(128, 128, 128, 0.6);

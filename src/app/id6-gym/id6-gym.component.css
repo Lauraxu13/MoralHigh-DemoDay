@@ -64,14 +64,21 @@
 
 }
 
-.main{
-    top: 18%;
-    left: 30%;
-}
+.characterParts {
+    top: 10%;
+    left: 65%;
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain    ;
+    z-index: 5;
+  }
 
-.friend{
+.meanGirl{
     top: 15%;
-    left: 75%;
+    left: 20%;
 }
 
 

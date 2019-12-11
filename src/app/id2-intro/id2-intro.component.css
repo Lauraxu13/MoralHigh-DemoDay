@@ -88,3 +88,21 @@ h3 {
      width: 50%;
      height: auto;
  }
+
+ .next {
+    background-color: white;
+    position: absolute;
+    top: 80%;
+    left: 88%;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+}
+
+
+ @media (min-width: 680px) {
+    .character {
+        height: 200px;
+        width: 200px;
+    }
+    
+  }

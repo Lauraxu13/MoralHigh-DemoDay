@@ -2,8 +2,9 @@
 
 
 
-    <div class="char main"><img src="/assets/moralhighmaincharacter.png"></div>
-
+    <div class="mainCharacter">
+        <div class="characterParts" *ngFor="let part of character; index as i" [style.background-image]="part"></div>
+    </div>
 
 
 
@@ -18,7 +19,7 @@
         <div class="dialogue" [ngClass]="{hide: hideDialogue, helped:total.popular <1}">
             <p>Makes fun of mGirl rude comment taunt</p>
         </div>
-        <button class="next"  (click)="nextButton()">next</button>
+        <button class="next" (click)="nextButton()">next</button>
 
         <div class="char meanGirl"><img src="/assets/moralhighmeangirl.png"></div>
 
@@ -31,3 +32,4 @@
             Gym to Be with
             Heather</button>
     </div>
+</div>

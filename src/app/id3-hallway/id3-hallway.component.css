@@ -54,10 +54,26 @@
   position: absolute;
 }
 
-.main {
+
+
+/* .mainCharacter {
   top: 18%;
   left: 30%;
+  width: 50%;
+  
+} */
+.characterParts {
+  top: 10%;
+  left: 30%;
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain    ;
+  z-index: 10;
 }
+
 
 .friend {
   top: 15%;

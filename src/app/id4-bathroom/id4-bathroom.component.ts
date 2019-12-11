@@ -20,6 +20,7 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
   flip: boolean = true;
   seconds: number = 6;
   private timer: any;
+  character: string[];
 
 
   constructor(private router: Router, private service: MasterService) { }
@@ -99,12 +100,16 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.total = this.service.getTS();
     this.totalOnInit = this.service.getTS();
+    this.character = this.service.getCharacter();
     document.body.classList.add('bathroomBody');
+    console.log(this.character)
+
 
 
   }
 
   ngOnDestroy() {
     clearTimeout(this.timer);
+
   }
 }

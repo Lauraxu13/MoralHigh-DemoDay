@@ -2,7 +2,9 @@
 
 
 
-    <div class="char main"><img src="/assets/moralhighmaincharacter.png"></div>
+    <div class="mainCharacter">
+        <div class="characterParts" *ngFor="let part of character; index as i" [style.background-image]="part"></div>
+    </div>
 
     <div class="hw1" [ngClass]="{show: showOpt}">
 
@@ -22,3 +24,5 @@
         <button class="opt1" (click)="opt1id5()">You did the homework</button>
         <button class="opt2" (click)="opt2id5()">You didn't do the homework</button>
     </div>
+
+</div>

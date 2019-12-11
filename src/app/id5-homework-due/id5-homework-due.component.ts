@@ -13,6 +13,7 @@ export class Id5HomeworkDueComponent implements OnInit {
   hideDialogue: boolean = false;
   showOpt: boolean = false
   total: TotalScore;
+  character: string[];
 
 
   constructor(private router: Router, private service: MasterService) { }
@@ -60,6 +61,7 @@ export class Id5HomeworkDueComponent implements OnInit {
 
   ngOnInit() {
     this.total = this.service.getTS();
+    this.character = this.service.getCharacter();
     document.body.classList.add('classBody');
 
   }
