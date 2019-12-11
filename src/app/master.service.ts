@@ -22,7 +22,6 @@ export class MasterService {
   };
 
   highScore: number = 0;
-  personality: string = "";
 
   character: string[] = [
     "url('/assets/options/maincharskin2.png')",
@@ -167,36 +166,35 @@ export class MasterService {
     // set personality = name
     if (scores[1][1] > scores[2][1]) {
       this.highScore = scores[1][1];
-      this.personality = scores[1][0];
+      this.totalScore.personality = scores[1][0];
     } else {
       this.highScore = scores[2][1];
-      this.personality = scores[2][0];
+      this.totalScore.personality = scores[2][0];
     }
     // if high score < 3 = set to nice
     if (this.highScore < scores[3][1]) {
       this.highScore = scores[3][1];
-      this.personality = scores[3][0];
+      this.totalScore.personality = scores[3][0];
     }
     // if high score < 4 = set to bully
     if (this.highScore < scores[4][1]) {
       this.highScore = scores[4][1];
-      this.personality = scores[4][0];
+      this.totalScore.personality = scores[4][0];
     }
     // if high score < 5 = do set to jock
     if (this.highScore < scores[5][1]) {
       this.highScore = scores[5][1];
-      this.personality = scores[5][0];
+      this.totalScore.personality = scores[5][0];
     }
 
     // if high score < 6 = set to nerd
     if (this.highScore < scores[6][1]) {
       this.highScore = scores[6][1];
-      this.personality = scores[6][0];
+      this.totalScore.personality = scores[6][0];
     }
 
-
     console.log(this.highScore);
-    console.log(this.personality);
+    console.log(this.totalScore.personality);
   }
 
 
