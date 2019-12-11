@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, OnDestroy } from "@angular/core";
 import { Router } from "@angular/router";
 import { MasterService } from '../master.service';
 import { TotalScore } from '../total-score';
@@ -8,40 +8,52 @@ import { TotalScore } from '../total-score';
   templateUrl: "./id4-bathroom.component.html",
   styleUrls: ["./id4-bathroom.component.css"]
 })
-export class Id4BathroomComponent implements OnInit {
+export class Id4BathroomComponent implements OnInit, OnDestroy {
 
 
   doAnimate: boolean = false;
   nextCounter: number = 0;
   hideDialogue: boolean = false;
   showOpt: boolean = true
-  popularity: number;
-  charisma: number;
   total: TotalScore;
-  flip: boolean= true;
-  seconds:number =6;
-  
+  totalOnInit: TotalScore;
+  flip: boolean = true;
+  seconds: number = 6;
+  private timer: any;
+
 
   constructor(private router: Router, private service: MasterService) { }
 
-countDown():any{
-  this.seconds =this.seconds -1
-    if (this.seconds < 0){
-      this.popularity = this.popularity - 1
-    this.service.setTSpopularity(this.popularity)
+  // if time < 0, run code
+  // if score !== score {
+  // don't do anything
+  // else if, route
 
-    this.charisma = this.charisma - 2
-    this.service.setTScharisma(this.charisma)
 
-    this.router.navigate(["homework"]);
-    console.log(this.popularity)
+  countDown(): any {
+    this.seconds = this.seconds - 1
+    if (this.seconds < 0) {
+      this.total.popular = this.total.popular - 1;
+      this.total.unpopular = this.total.unpopular + 1;
 
-  } else{
-    setTimeout(() => {
-      this.countDown();
-    },1000);
-  }
-};
+      this.service.setTSpopularity(this.total.popular, this.total.unpopular)
+
+      this.total.nice = this.total.nice - 2;
+      this.total.bully = this.total.bully + 2;
+
+      this.service.setTScharisma(this.total.nice, this.total.bully)
+
+      this.router.navigate(["homework"]);
+
+      console.log(this.total)
+    } else {
+      this.timer = setTimeout(() => {
+        this.countDown();
+      }, 1000);
+    }
+
+    console.log("countdown happening")
+  };
 
 
   nextButton() {
@@ -57,34 +69,42 @@ countDown():any{
   }
 
   opt1id4() {
-    this.popularity = this.popularity + 1
-    this.service.setTSpopularity(this.popularity)
+    this.total.popular = this.total.popular + 1;
+    this.total.unpopular = this.total.unpopular - 1;
+    this.service.setTSpopularity(this.total.popular, this.total.unpopular)
 
-    this.charisma = this.charisma + 1
-    this.service.setTScharisma(this.charisma)
+    this.total.nice = this.total.nice + 2;
+    this.total.bully = this.total.bully - 2;
+    this.service.setTScharisma(this.total.nice, this.total.bully)
 
     this.router.navigate(["homework"]);
 
     console.log(this.total)
   }
   opt2id4() {
-    this.popularity = this.popularity - 1
-    this.service.setTSpopularity(this.popularity)
+    this.total.popular = this.total.popular - 1;
+    this.total.unpopular = this.total.unpopular + 1;
+    this.service.setTSpopularity(this.total.popular, this.total.unpopular)
 
-    this.charisma = this.charisma - 2
-    this.service.setTScharisma(this.charisma)
+    this.total.nice = this.total.nice - 2;
+    this.total.bully = this.total.bully + 2;
+    this.service.setTScharisma(this.total.nice, this.total.bully)
+
 
     this.router.navigate(["homework"]);
-    console.log(this.popularity)
+    console.log(this.total)
   }
 
 
   ngOnInit() {
-    this.popularity = this.service.getTSpopularity();
-    this.charisma = this.service.getTScharisma();
     this.total = this.service.getTS();
+    this.totalOnInit = this.service.getTS();
     document.body.classList.add('bathroomBody');
 
 
+  }
+
+  ngOnDestroy() {
+    clearTimeout(this.timer);
   }
 }

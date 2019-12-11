@@ -12,8 +12,6 @@ export class Id5HomeworkDueComponent implements OnInit {
   nextCounter: number = 0;
   hideDialogue: boolean = false;
   showOpt: boolean = false
-  academia: number;
-  charisma: number;
   total: TotalScore;
 
 
@@ -26,26 +24,30 @@ export class Id5HomeworkDueComponent implements OnInit {
       this.showOpt = true;
 
     }
-    
+
   }
 
   opt1id5() {
-    this.academia = this.academia + 1;
-    this.service.setTSacademia(this.academia);
+    this.total.nerd = this.total.nerd + 2;
+    this.total.jock = this.total.jock - 2;
+    this.service.setTSacademia(this.total.nerd, this.total.jock);
 
-    this.charisma = this.charisma + 1;
-    this.service.setTScharisma(this.charisma);
+    this.total.nice = this.total.nice + 1;
+    this.total.nerd = this.total.bully - 1;
+    this.service.setTScharisma(this.total.nice, this.total.bully);
 
     this.router.navigate(["gym"]);
 
     console.log(this.total)
   }
   opt2id5() {
-    this.academia = this.academia - 1;
-    this.service.setTSacademia(this.academia);
+    this.total.nerd = this.total.nerd - 2;
+    this.total.jock = this.total.jock + 2;
+    this.service.setTSacademia(this.total.nerd, this.total.jock);
 
-    this.charisma = this.charisma - 2;
-    this.service.setTScharisma(this.charisma);
+    this.total.nice = this.total.nice - 1;
+    this.total.nerd = this.total.bully + 1;
+    this.service.setTScharisma(this.total.nice, this.total.bully);
 
     this.router.navigate(["gym"]);
     console.log(this.total)
@@ -57,8 +59,6 @@ export class Id5HomeworkDueComponent implements OnInit {
 
 
   ngOnInit() {
-    this.academia = this.service.getTSacademia();
-    this.charisma = this.service.getTScharisma();
     this.total = this.service.getTS();
     document.body.classList.add('classBody');
 

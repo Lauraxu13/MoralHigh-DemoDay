@@ -5,17 +5,19 @@
     <div class="char main"><img src="/assets/moralhighmaincharacter.png"></div>
 
 
-   
+
 
     <div class="gym1" [ngClass]="{show: showOpt}">
 
         <!-- if you saved pGirl in Bathroom -->
-        <div class="dialogue" [ngClass]="{hide: hideDialogue, helped:popularity >=6, noHelp:popularity <=5}">
+        <div class="dialogue" [ngClass]="{hide: hideDialogue, helped: total.popular >= 1}">
             <p>Popular girl asks you to skip gym</p>
         </div>
 
         <!-- if you did not tell pGirl about Bathroom -->
-        <div class="dialogue"  [ngClass]="{hide: hideDialogue, noHelp:popularity >=6, helped:popularity <=5}">Makes fun of mGirl rude comment taunt</div>
+        <div class="dialogue" [ngClass]="{hide: hideDialogue, helped:total.popular <= 0}">
+            <p>Makes fun of mGirl rude comment taunt</p>
+        </div>
         <button class="next" [ngClass]="{hide: hideDialogue}" (click)="nextButton()">next</button>
 
         <div class="char meanGirl"><img src="/assets/moralhighmeangirl.png"></div>
@@ -25,5 +27,7 @@
     <div class="gym2" [ngClass]="{show: !showOpt}">
         <button class="opt1" (click)="opt1id6()">Don't skip Gym</button>
         <button class="opt2" (click)="opt2id6()">Skip gym to study</button>
-        <button class="opt3"(click)="opt3id6()"[ngClass]="{helped:popularity >=6, noHelp:popularity <=5}">Skip Gym to Be with Heather</button>
+        <button class="opt3" (click)="opt3id6()" [ngClass]="{helped:total.popular >=1, noHelp:total.unpopular <=0}">Skip
+            Gym to Be with
+            Heather</button>
     </div>
