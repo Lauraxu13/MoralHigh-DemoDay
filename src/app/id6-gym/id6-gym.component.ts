@@ -16,7 +16,9 @@ export class Id6GymComponent implements OnInit {
   total: TotalScore;
   personality: string;
 
-
+  popularity: string = "";
+  charisma: string = "";
+  academia: string = "";
 
   constructor(private router: Router, private service: MasterService) { }
   nextButton() {

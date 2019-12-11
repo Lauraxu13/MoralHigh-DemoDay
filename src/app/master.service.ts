@@ -21,6 +21,8 @@ export class MasterService {
 
   };
 
+  highScore: number = 0;
+  personality: string = "";
 
   character: string[] = [
     "url('/assets/options/maincharskin2.png')",
@@ -141,13 +143,62 @@ export class MasterService {
   }
 
 
-  calculatePersonality() {
-    // is popularity > academic and charisma?
 
-    // is academic > popularity and charisma?
+  calculatePersonality(): any {
 
-    // is charisma > academic and popularity?
+    const scores = Object.entries(this.totalScore)
+    console.log(scores)
+
+    //     (8) [Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2)]
+    // 0: (2) ["name", ""]
+    // 1: (2) ["popular", 0]
+    // 2: (2) ["unpopular", 0]
+    // 3: (2) ["nice", 0]
+    // 4: (2) ["bully", 0]
+    // 5: (2) ["jock", 0]
+    // 6: (2) ["nerd", 0]
+    // 7: (2) ["personality", ""]
+
+    console.log(scores[1][1])
+
+
+    // if 1 > 2 = popular, else unpopular
+    // set high score =  #
+    // set personality = name
+    if (scores[1][1] > scores[2][1]) {
+      this.highScore = scores[1][1];
+      this.personality = scores[1][0];
+    } else {
+      this.highScore = scores[2][1];
+      this.personality = scores[2][0];
+    }
+    // if high score < 3 = set to nice
+    if (this.highScore < scores[3][1]) {
+      this.highScore = scores[3][1];
+      this.personality = scores[3][0];
+    }
+    // if high score < 4 = set to bully
+    if (this.highScore < scores[4][1]) {
+      this.highScore = scores[4][1];
+      this.personality = scores[4][0];
+    }
+    // if high score < 5 = do set to jock
+    if (this.highScore < scores[5][1]) {
+      this.highScore = scores[5][1];
+      this.personality = scores[5][0];
+    }
+
+    // if high score < 6 = set to nerd
+    if (this.highScore < scores[6][1]) {
+      this.highScore = scores[6][1];
+      this.personality = scores[6][0];
+    }
+
+
+    console.log(this.highScore);
+    console.log(this.personality);
   }
+
 
   // Get from data base
 
@@ -194,7 +245,7 @@ export class MasterService {
     this.character = character;
   }
 
-  getLeaderBoard(): Observable<any>{
-   return this.http.get(`${this.BASE_URL}/player-info`)
+  getLeaderBoard(): Observable<any> {
+    return this.http.get(`${this.BASE_URL}/player-info`)
   }
 }
