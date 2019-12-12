@@ -44,7 +44,7 @@ export class Id6GymComponent implements OnInit {
     this.service.setTSpopularity(this.total.popular, this.total.unpopular);
 
     //send updates to database
-    this.update();
+    // this.update();
     this.router.navigate(["score"]);
     console.log(this.total);
   }
@@ -57,7 +57,7 @@ export class Id6GymComponent implements OnInit {
     this.total.unpopular = this.total.popular + 1;
     this.service.setTSpopularity(this.total.popular, this.total.unpopular);
     // send updates to database
-    this.update();
+    // this.update();
     this.router.navigate(["score"]);
     console.log(this.total);
   }
@@ -72,16 +72,15 @@ export class Id6GymComponent implements OnInit {
     this.service.setTSpopularity(this.total.popular, this.total.unpopular);
 
     // send updates to database
-    this.update();
     this.router.navigate(["score"]);
     console.log(this.total);
   }
 
-  update() {
-    this.service.updateDatabase(this.name, this.unpopular, this.nice, this.popular, this.personality, this.nerd, this.jock, this.bully).subscribe(scores => {
-      this.score = scores
-    });
-  }
+  // update() {
+  //   this.service.updateDatabase(this.total.name, this.total.popular, this.total.unpopular, this.total.nice, this.total.jock, this.total.bully, this.total.nerd, this.total.personality).subscribe(scores => {
+  //     this.score = scores
+  //   });
+  // }
   ngOnInit() {
     document.body.classList.add("gymBody");
     this.name = this.service.getName();

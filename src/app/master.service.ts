@@ -201,16 +201,16 @@ export class MasterService {
   // Get from data base
 
   // Push into data base
-  updateDatabase(name: string, popular: number, nice: number, jock: number, personality: string,unpopular:number,bully:number,nerd:number): Observable<void> {
+  updateDatabase(name: string, popular: number, unpopular: number, nice: number, jock: number, bully: number, nerd: number, personality: string, ): Observable<void> {
     const body = {
       "name": name,
       "popular": popular,
       "unpopular": unpopular,
       "nice": nice,
+      "jock": jock,
       "bully": bully,
       "nerd": nerd,
-      "jock": jock,
-      "personality":personality
+      "personality": personality
     };
     return this.http.post<void>(`${this.BASE_URL}/player-info`, body);
     // return this.http.get<Student[]>(`${this.BASE_URL}/students`)

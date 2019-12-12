@@ -13,12 +13,19 @@ export class Id7ScoringComponent implements OnInit {
 
   total: TotalScore;
   scores: any[];
+  score: any;
   highScore: number;
 
   constructor(private router: Router, private service: MasterService) { }
 
   next() {
     this.router.navigate(["leaderboard"]);
+  }
+
+  update() {
+    this.service.updateDatabase(this.total.name, this.total.popular, this.total.unpopular, this.total.nice, this.total.jock, this.total.bully, this.total.nerd, this.total.personality).subscribe(scores => {
+      this.score = scores
+    });
   }
 
 
@@ -28,6 +35,7 @@ export class Id7ScoringComponent implements OnInit {
     this.scores = this.service.calculatePersonality();
     this.total.personality = this.service.totalScore.personality;
     this.highScore = this.service.highScore;
+    this.update();
     document.body.classList.add('scoresBody');
 
   }
