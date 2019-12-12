@@ -12,25 +12,29 @@
 
 .dialogue {
   display: none;
+  width: 20%;
+  height: auto;
+  padding: 2%;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255, 0.8);
+
 }
 
 .dialogue p {
-  background-color: rgb(255, 255, 255, 0.8);
-  width: 100px;
-  height: auto;
-  padding: 20px 10px 20px 10px;
-  border-radius: 20%;
+  font-size: 1rem;
+  padding: 1%;
 }
 
 .dialogue.one {
   display: initial;
   position: absolute;
   left: 10%;
+  top: 15%;
 }
 .dialogue.two {
   display: initial;
   position: absolute;
-  left: 75%;
+  left: 70%;
   animation: 3s fadeIn;
   animation-fill-mode: forwards;
 }
@@ -127,11 +131,29 @@ img {
   }
 }
 
-button {
+
+.next {
   background-color: white;
   position: absolute;
-  top: 300px;
-  left: 550px;
-  padding: 10px 20px 10px 20px;
+  top: 85%;
+  left: 80%;
+  padding: 2%;
+  width: 15%;
   border-radius: 10px;
+  font-size: 1rem;
+}
+
+
+@media (min-width: 680px) {
+  .next {
+      font-size: 2rem;
+  }
+
+
+
+.dialogue p {
+  padding: 10%;
+  font-size: 2rem;
+}
+  
 }

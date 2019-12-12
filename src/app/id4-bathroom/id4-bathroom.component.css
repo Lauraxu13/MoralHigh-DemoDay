@@ -9,11 +9,7 @@
     height: 60%;
     position: absolute;
 }
-/* .mainCharacter {
-    height: 100%;
-    width: 20%;
-    
-} */
+
 .characterParts {
     top: 20%;
     left: 20%;
@@ -28,16 +24,40 @@
 .char.meanGirl {
     height: 90%;
     top: 10%;
-    left: 68%;
+    left: 65%;
+    width: 35%;
+    overflow: hidden;
 }
 
 img {
     height: 100%;
+    width: auto;
+    overflow: hidden;
+
 }
 
 .dialogue.hide{
     display: none
 }
+
+
+.dialogue {
+    position: absolute;
+    top: 8%;
+    left: 38%;
+    width: 25%;
+    height: auto;
+    padding: 3%;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+  
+  }
+  .dialogue p {
+    font-size: 1rem;
+    padding: 1%;
+  }
 
 
 .bathroom2{
@@ -48,25 +68,43 @@ img {
     background-color: rgb(128, 128, 128, 0.6);
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
-.bathroom2 > p {
-margin: 0 auto;
-margin-top: 5%;
-font-size: 20px;
+.dialogue2{
+margin-top: 2%;
+height: 5%;
+width: 70%;
 background-color: rgb(255, 255, 255, 0.8);
 border-radius: 20px;
-padding: 20px;
+padding: 5% 1% 5% 1%;
+font-size: 1rem;
+text-align: center;
+
+}
+
+.timer {
+    border-radius: 100%;
+    border: 2px solid black;
+    font-size: 1em;
+    margin: 0%;
+    margin-top: 2%;
+    width: 10%;
+    background-color: rgb(255, 255, 255, 0.8);
+    padding: 1%;
+    display: flex;
+    justify-content: center;
 }
 
 
-.bathroom2 > button {
+.bathroom2 button {
     width: 50%;
-    height: 10%;       
+    height: 20%;       
     margin: 0 auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     background-color: rgb(255, 255, 255, 0.8);
     border-radius: 10px;
 
@@ -74,35 +112,21 @@ padding: 20px;
 }
 
 
-
-.dialogue p {
-    background-color: rgb(255, 255, 255, 0.8);
-    width: 100px;
-    height: auto;
-    padding: 20px 10px 20px 10px;
-    border-radius: 20%;
-    position: absolute;
-    left: 50%;
-    top: 10%;
-
-}
-
-
-
 .show{
-
     display:none;
 }
-
 
 .next {
     background-color: white;
     position: absolute;
-    top: 80%;
-    left: 88%;
-    padding: 10px 20px 10px 20px;
+    top: 85%;
+    left: 80%;
+    padding: 2%;
+    width: 15%;
     border-radius: 10px;
-}
+    font-size: 1rem;
+    z-index: 1;
+  }
 
 
 .animate {
@@ -142,10 +166,38 @@ padding: 20px;
     }
 
     100% {
-        transform: translateX(130%) translateY(-2px);
+        transform: translateX(110%) translateY(-2px);
+        overflow: hidden;
+        /* visibility: hidden; */
     }
+    
 };
 
 .flip{
     display:none;
 }
+
+
+@media (min-width: 680px) {
+    .next {
+        font-size: 2rem;
+    }
+  
+  
+  
+  .dialogue p {
+    padding: 10%;
+    font-size: 2rem;
+  }
+
+  .dialogue2 {
+    font-size: 2rem;
+  }
+  .bathroom2 button {
+    font-size: 2rem;
+}
+
+.timer p {
+    font-size: 2em;
+}
+  }
