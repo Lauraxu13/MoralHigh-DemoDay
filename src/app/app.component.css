@@ -1,3 +1,25 @@
-body {
-    margin: 0;
+.landAndUp {
+  display: none;
+}
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 640px) and (orientation: landscape) {
+  .portraitMode {
+    display: none;
+  }
+
+  .landAndUp {
+    display: initial;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .portraitMode {
+    display: none;
+  }
+
+  .landAndUp {
+    display: initial;
+  }
+}
+@media only screen and (min-width: 1024px) {
 }
