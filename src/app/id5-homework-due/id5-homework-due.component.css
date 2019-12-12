@@ -86,11 +86,13 @@ img {
 
 .next {
     background-color: white;
-    position: absolute;
-    top: 80%;
-    left: 88%;
-    padding: 10px 20px 10px 20px;
-    border-radius: 10px;
+  position: absolute;
+  top: 85%;
+  left: 80%;
+  padding: 2%;
+  width: 15%;
+  border-radius: 10px;
+  font-size: 1rem;
 }
 
 
@@ -102,4 +104,19 @@ img {
 .show{
 
     display:none;
+}
+
+@media only screen and (min-width: 680px){
+    .dialogue >p{
+        background-color: rgb(255, 255, 255, 0.8);
+        width: 100px;
+        height: auto;
+        padding: 20px 10px 20px 10px;
+        border-radius: 45%;
+        position: absolute;
+        right: 5px;
+        /* font-size: inherit; */
+        text-align: center
+    }
+
 }
