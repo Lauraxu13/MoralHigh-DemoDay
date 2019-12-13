@@ -1,5 +1,10 @@
-<ol>
-    <li *ngFor="let row of leaderBoard">
-        {{row.name}} {{row.popular}} {{row.unpopular}} {{row.nice}} {{row.nerd}} {{row.bully}} {{row.jock}}{{row.personality}}
-    </li>
+<h1>leaderBoard</h1>
+
+<ol class="scores">
+    <li *ngFor="let row of leaderBoard" >
+     
+      {{row.name}}  popular:{{row.popular}}  unpopular:{{row.unpopular}}  nice:{{row.nice}}  nerd:{{row.nerd}}  bully:{{row.bully}}   jock:{{row.jock}}   personality:{{row.personality}}
+    
+        
+</li> 
 </ol>
