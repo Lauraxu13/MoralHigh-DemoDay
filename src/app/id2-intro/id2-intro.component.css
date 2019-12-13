@@ -1,9 +1,11 @@
-.body {
+.content {
   display: flex;
   justify-content: space-between;
-  /* width: 100%;
-  height: 100%; */
+  background-color: #cecece;
+  height: 100vh;
+
 }
+
 
 /* WHOLE LEFT SIDE  */
 .left {
@@ -16,19 +18,22 @@
 .intro {
   width: auto;
   height: 40%;
-
   padding: 3px;
+  margin: 10px;
+
 }
+
 p {
-  font-size: 2vw;
-  margin: 2px;
+  font-size: .8rem;
+  /* margin: 10px; */
+  font-family: 'Gelasio', sans-serif;
 }
 
 .mainCharacter {
   align-items: center;
   width: 100%;
   height: 100%;
-  margin-left: 70px;
+  margin-left: 80px;
 }
 
 .characterParts {
@@ -44,6 +49,10 @@ p {
 /* WHOLE RIGHT SIDE */
 .right {
   width: 50%;
+  height: auto;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
 }
 
 .allParts {
@@ -54,7 +63,7 @@ p {
 .flex {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .character {
@@ -62,22 +71,41 @@ p {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  height: 45px;
-  width: 45px;
+  width: 10%;
 }
 
 h3 {
   margin-right: 10px;
+  height: 5px;
+  font-family: 'Notable', sans-serif;
+  text-shadow: 2px 2px white;
 }
 
 .buttonRight {
   display: flex;
+  align-self: flex-end;
 }
 .next {
-  background-color: white;
-  width: 15%;
+  margin: 5px;
+  margin-top: 20px;
+  background-color: #A00100;
+  width: 100%;
   border-radius: 10px;
-  font-size: 1vm;
+  font-size: 1rem;
+  z-index: 10;
+  color: white;
+  border: 2px solid ;
+  border-radius: 10px;
+  font-family: 'Notable', sans-serif;
+  letter-spacing: 10px;
+  text-shadow: 2px 2px black;
+  text-align: center;
+  transition: transform .2s; 
+
+}
+
+.next:hover { 
+  transform: scale(1.1); 
 }
 
 @media (min-width: 680px) {
@@ -87,5 +115,16 @@ h3 {
 
   .next {
     font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+
+  }
+
+  p {
+    font-size: 2rem;
+    /* margin: 10px; */
+    font-family: 'Gelasio', sans-serif;
   }
 }
