@@ -18,7 +18,7 @@
 .intro {
   width: auto;
   height: 40%;
-  padding: 3px;
+  padding: 10px;
   margin: 10px;
 
 }
@@ -38,6 +38,7 @@ p {
 
 .characterParts {
   position: absolute;
+  top: 50%;
   height: 50%;
   width: 20%;
   background-repeat: no-repeat;
@@ -50,7 +51,9 @@ p {
 .right {
   width: 50%;
   height: auto;
-  padding: 5%;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
   display: flex;
   flex-direction: column;
 }
@@ -64,6 +67,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .character {
@@ -75,8 +79,7 @@ p {
 }
 
 h3 {
-  margin-right: 10px;
-  height: 5px;
+  margin: 10px;
   font-family: 'Notable', sans-serif;
   text-shadow: 2px 2px white;
 }
@@ -84,23 +87,28 @@ h3 {
 .buttonRight {
   display: flex;
   align-self: flex-end;
+  width: 50%;
+
 }
 .next {
   margin: 5px;
   margin-top: 20px;
+  padding-top: 5px;
+  padding-bottom: 10px;
   background-color: #A00100;
   width: 100%;
   border-radius: 10px;
   font-size: 1rem;
   z-index: 10;
   color: white;
-  border: 2px solid ;
+  border: 2px solid black;
   border-radius: 10px;
   font-family: 'Notable', sans-serif;
   letter-spacing: 10px;
   text-shadow: 2px 2px black;
   text-align: center;
   transition: transform .2s; 
+
 
 }
 

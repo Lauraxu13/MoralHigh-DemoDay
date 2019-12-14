@@ -22,7 +22,7 @@
 
 .dialogue p {
   font-size: 1rem;
-  padding: 1%;
+  padding: 2%;
 }
 
 .dialogue.one {
@@ -34,7 +34,7 @@
 .dialogue.two {
   display: initial;
   position: absolute;
-  left: 70%;
+  left: 75%;
   animation: 3s fadeIn;
   animation-fill-mode: forwards;
 }
@@ -133,16 +133,31 @@ img {
 
 
 .next {
-  background-color: white;
+  background-color: #A00100;
+  border: 2px solid black;
+  color: white;
+  font-family: 'Notable', sans-serif;
+  text-shadow: 2px 2px black;
+  letter-spacing: 10px;
+  text-align: center;
+  transition: transform .2s; 
   position: absolute;
   top: 85%;
-  left: 80%;
-  padding: 2%;
-  width: 15%;
+  left: 75%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  width: 20%;
   border-radius: 10px;
   font-size: 1rem;
 }
 
+
+
+.next:hover { 
+  transform: scale(1.1); 
+}
 
 @media (min-width: 680px) {
   .next {
