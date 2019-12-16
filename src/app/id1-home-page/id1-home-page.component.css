@@ -8,12 +8,9 @@
     background-color: #cecece;
 }
 
-.banner {
-    width: 60%;
-    height: 40%;
-    background-image: url("/assets/banner.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+img{
+    width: 50%;
+    height: auto;
 }
 
 
