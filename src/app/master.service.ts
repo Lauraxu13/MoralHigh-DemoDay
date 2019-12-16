@@ -23,6 +23,8 @@ export class MasterService {
 
   highScore: number = 0;
 
+  transitionCounter: number = 0;
+
   character: string[] = [
     "url('/assets/options/maincharskin2.png')",
     "url('/assets/options/mainchareye3.png')",
@@ -248,5 +250,14 @@ export class MasterService {
 
   getLeaderBoard(): Observable<any> {
     return this.http.get(`${this.BASE_URL}/player-info`)
+  }
+
+
+  getTransitionCounter(): number {
+    return this.transitionCounter;
+  }
+
+  setTransitionCounter(count: number) {
+    this.transitionCounter = count;
   }
 }

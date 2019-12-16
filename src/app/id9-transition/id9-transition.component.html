@@ -1,0 +1,11 @@
+<div class="body">
+
+
+    <div class="mainCharacter">
+        <div class="characterParts" *ngFor="let part of character; index as i" [style.background-image]="part"></div>
+    </div>
+
+
+
+    <button type="button" class="next" (click)="nextButton()">Next</button>
+</div>

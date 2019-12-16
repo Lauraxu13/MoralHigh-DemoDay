@@ -8,18 +8,21 @@ import { Id5HomeworkDueComponent } from './id5-homework-due/id5-homework-due.com
 import { Id6GymComponent } from './id6-gym/id6-gym.component';
 import { Id7ScoringComponent } from './id7-scoring/id7-scoring.component';
 import { Id8LeaderboardComponent } from './id8-leaderboard/id8-leaderboard.component';
+import { Id9TransitionComponent } from './id9-transition/id9-transition.component';
 
 
 const routes: Routes = [
-  {path: "home" , component: Id1HomePageComponent },
-  {path: "intro" , component: Id2IntroComponent },
-  {path: "hallway" , component: Id3HallwayComponent },
-  {path: "bathroom" , component: Id4BathroomComponent },
-  {path: "homework" , component: Id5HomeworkDueComponent },
-  {path: "gym" , component: Id6GymComponent },
-  {path: "score" , component: Id7ScoringComponent },
-  {path:"leaderboard",component:Id8LeaderboardComponent},
-  {path: "", redirectTo: "/home", pathMatch: "full" }
+  { path: "home", component: Id1HomePageComponent },
+  { path: "intro", component: Id2IntroComponent },
+  { path: "hallway", component: Id3HallwayComponent },
+  { path: "bathroom", component: Id4BathroomComponent },
+  { path: "homework", component: Id5HomeworkDueComponent },
+  { path: "gym", component: Id6GymComponent },
+  { path: "score", component: Id7ScoringComponent },
+  { path: "leaderboard", component: Id8LeaderboardComponent },
+  { path: "transition", component: Id9TransitionComponent },
+
+  { path: "", redirectTo: "/home", pathMatch: "full" }
 ];
 
 

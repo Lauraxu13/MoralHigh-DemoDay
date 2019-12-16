@@ -37,7 +37,7 @@ export class Id5HomeworkDueComponent implements OnInit {
     this.total.bully = this.total.bully - 1;
     this.service.setTScharisma(this.total.nice, this.total.bully);
 
-    this.router.navigate(["gym"]);
+    this.router.navigate(["transition"]);
 
     console.log(this.total)
   }
@@ -50,7 +50,7 @@ export class Id5HomeworkDueComponent implements OnInit {
     this.total.bully = this.total.bully + 1;
     this.service.setTScharisma(this.total.nice, this.total.bully);
 
-    this.router.navigate(["gym"]);
+    this.router.navigate(["transition"]);
     console.log(this.total)
   }
 
