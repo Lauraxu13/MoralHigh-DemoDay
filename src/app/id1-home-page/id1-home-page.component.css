@@ -65,6 +65,10 @@ button:hover {
 }
 
 
+p{
+    font-family: "Gelasio", sans-serif;
+
+}
 
 @media (min-width: 680px) {
     .master {
@@ -82,5 +86,9 @@ button:hover {
         font-size: 2rem;
         padding: 2%;
       
+    }
+
+    p {
+        font-size: 2rem;
     }
   }

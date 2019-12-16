@@ -1,16 +1,20 @@
-
-
 <div class="master">
 
-   
-        <img src="/assets/banner.png" >
-    
 
-<form (ngSubmit)="newPlayer()" #form="ngForm">
-    <label for="name">Name Your Character
-    <input [(ngModel)]="name" type="text" placeholder="Name" name="name"></label>
-    <button>Start</button>
+    <img src="/assets/banner.png">
+
+
+    <form (ngSubmit)="newPlayer(form.value.name)" #form="ngForm">
+        <label for="name">Name Your Character
+            <input #name="ngModel" (ngModel)="(name)" pattern="[A-Za-z]*" type="text" placeholder="Name"
+                name="name"></label>
+
+        <div *ngIf="!name?.valid  && (name?.dirty || name?.touched) && name.errors.pattern" class="valid">
+            <p> Please enter a name that is only letters</p>
+        </div>
+        <button type="submit">Start</button>
     </form>
-    
- 
-</div>   
+
+
+
+</div>
