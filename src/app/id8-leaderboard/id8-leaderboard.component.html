@@ -1,10 +1,21 @@
-<h1>leaderBoard</h1>
-
+<body class="grad">
+  
+   
+  
+<header class="head">
+    <img src="/assets/banner.png" >
+  <h1>leaderBoard</h1>
+</header>
+<main>
 <ol class="scores">
     <li *ngFor="let row of leaderBoard" >
      
-      {{row.name}}  popular:{{row.popular}}  unpopular:{{row.unpopular}}  nice:{{row.nice}}  nerd:{{row.nerd}}  bully:{{row.bully}}   jock:{{row.jock}}   personality:{{row.personality}}
+      {{row.name}} popular:{{row.popular}}  unpopular:{{row.unpopular}}  nice:{{row.nice}}  nerd:{{row.nerd}}  bully:{{row.bully}}   jock:{{row.jock}}   personality:{{row.personality}}
     
         
 </li> 
 </ol>
+
+</main>
+
+</body>
