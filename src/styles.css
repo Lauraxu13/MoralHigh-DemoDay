@@ -1,8 +1,9 @@
 body {
     margin: 0;
-    overflow: hidden;
+    overflow: auto;
     
 }
+
 
 .hallwayBody {
     margin: 0 auto;
