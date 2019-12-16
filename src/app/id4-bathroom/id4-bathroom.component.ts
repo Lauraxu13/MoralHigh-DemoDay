@@ -78,7 +78,7 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
     this.total.bully = this.total.bully - 2;
     this.service.setTScharisma(this.total.nice, this.total.bully)
 
-    this.router.navigate(["homework"]);
+    this.router.navigate(["transition"]);
 
     console.log(this.total)
   }
@@ -92,7 +92,7 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
     this.service.setTScharisma(this.total.nice, this.total.bully)
 
 
-    this.router.navigate(["homework"]);
+    this.router.navigate(["transition"]);
     console.log(this.total)
   }
 

@@ -16,14 +16,27 @@ html{
     display: none;
 }
 
-.dialogue > p {
-    background-color: rgb(255, 255, 255, 0.8);
-    width: 100px;
+
+
+.dialogue.hide.helped{
+    display:initial;
+    position: absolute;
+    top: 8%;
+    left: 38%;
+    width: 25%;
     height: auto;
-    padding: 20px 10px 20px 10px;
-    border-radius: 45%;
-    font-size: 0.8rem;
-    text-align: center;
+    padding: 3%;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+}
+
+.dialogue > p {
+    font-size: 1rem;
+    padding: 1%;
+    font-family: 'Gelasio', sans-serif;
+    
    
 }
 
@@ -35,6 +48,7 @@ html{
     background-color: rgb(128, 128, 128, 0.6);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     
 }
 
@@ -57,6 +71,8 @@ html{
     margin-bottom: 5%;
     background-color: rgb(255, 255, 255, 0.8);
     border-radius: 10px;
+    font-weight: 800;
+
     
     }
 
@@ -128,9 +144,6 @@ img {
     display:none;
 }
 
-.dialogue.hide.helped{
-    display:initial;
-}
 
 .opt3.hide.helped{
     display: initial;
@@ -140,15 +153,11 @@ img {
 @media only screen and (min-width: 680px){
 
     .dialogue > p {
-    background-color: rgb(255, 255, 255, 0.8);
-    width: 100px;
-    height: auto;
-    padding: 20px 10px 20px 10px;
-    border-radius: 45%;
-    position: absolute;
-    right: 580px;
-    font-size: inherit;
-    text-align: center;
+    font-size: 2.5rem;
+    }
+
+    button {
+        font-size: 2.5rem;
     }
     .next {
         font-size: 2rem;
