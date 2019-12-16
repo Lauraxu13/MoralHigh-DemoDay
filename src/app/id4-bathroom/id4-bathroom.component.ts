@@ -23,6 +23,11 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
   character: string[];
 
 
+  transition: boolean = false;
+  animateSeconds: number = 5;
+
+
+
   constructor(private router: Router, private service: MasterService) { }
 
   // if time < 0, run code
@@ -44,7 +49,8 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
 
       this.service.setTScharisma(this.total.nice, this.total.bully)
 
-      this.router.navigate(["homework"]);
+      this.showOpt = !this.showOpt;
+      this.transition = !this.transition;
 
       console.log(this.total)
     } else {
@@ -78,7 +84,11 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
     this.total.bully = this.total.bully - 2;
     this.service.setTScharisma(this.total.nice, this.total.bully)
 
-    this.router.navigate(["transition"]);
+    this.showOpt = !this.showOpt;
+    this.doAnimate = !this.doAnimate
+    this.transition = !this.transition
+    this.animationCountDown();
+    console.log(this.transition)
 
     console.log(this.total)
   }
@@ -91,10 +101,32 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
     this.total.bully = this.total.bully + 2;
     this.service.setTScharisma(this.total.nice, this.total.bully)
 
+    this.showOpt = !this.showOpt;
+    this.doAnimate = !this.doAnimate
+    this.transition = !this.transition
+    this.animationCountDown();
 
-    this.router.navigate(["transition"]);
     console.log(this.total)
   }
+
+
+  animationCountDown(): any {
+    this.animateSeconds = this.animateSeconds - 1
+    if (this.animateSeconds < 0) {
+
+      this.router.navigate(["homework"]);
+
+      console.log(this.total)
+    } else {
+      setTimeout(() => {
+        this.animationCountDown();
+      }, 1000);
+    }
+
+    console.log("animate countdown happening")
+  };
+
+
 
 
   ngOnInit() {

@@ -3,7 +3,8 @@
 
 
     <div class="mainCharacter">
-        <div class="characterParts" *ngFor="let part of character; index as i" [style.background-image]="part"></div>
+        <div class="characterParts" [ngClass]="{transition: transition}" *ngFor="let part of character; index as i"
+            [style.background-image]="part"></div>
     </div>
 
     <div class="hw1" [ngClass]="{show: showOpt}">

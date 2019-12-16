@@ -1,7 +1,8 @@
 <div class="body">
 
   <div class="mainCharacter">
-    <div class="characterParts" *ngFor="let part of character; index as i" [style.background-image]="part"></div>
+    <div class="characterParts" [ngClass]="{transition: transition}" *ngFor="let part of character; index as i"
+      [style.background-image]="part"></div>
   </div>
 
   <div class="bathroom1" [ngClass]="{ show: !showOpt }">
@@ -13,16 +14,16 @@
     </div>
     <button class="next" (click)="nextButton()">Next</button>
 
-    <div class="char meanGirl">
+    <div class="char meanGirl" *ngIf="!transition">
       <img [ngClass]="{ flip: !flip }" src="/assets/moralhighmeangirl.png" />
-      <img [ngClass]="{ animate: doAnimate }" *ngIf="doAnimate" [ngClass]="{ flip: flip }"
+      <img [ngClass]="{ animate: doAnimate }"  *ngIf="doAnimate" [ngClass]="{ flip: flip }"
         src="/assets/moralhighmeangirlTP.png" />
     </div>
   </div>
 
   <div class="bathroom2" [ngClass]="{ show: showOpt }">
     <p class="dialogue2">
-      OMG! Should I tell Heather about the toilet paper?! 
+      OMG! Should I tell Heather about the toilet paper?!
       <br>What will you do?
     </p>
     <div class="timer">

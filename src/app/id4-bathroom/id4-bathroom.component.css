@@ -203,6 +203,53 @@ font-family: 'Gelasio', sans-serif;
 }
 
 
+
+
+
+.transition {
+    animation: transition 4s forwards;
+   
+}
+
+
+@keyframes transition {
+    0% {
+        transform: translateX(0%) rotate(-5deg);
+    }
+    10% {
+        transform: translateX(15%) translateY(5%) rotate(-5deg); 
+    }
+
+    20% {
+        transform: translateX(30%) translateY(15%) rotate(5deg); 
+    }
+    30% {
+        transform: translateX(45%) translateY(25%) rotate(-5deg); 
+    }
+    45% {
+        transform: translateX(55%) translateY(40%) rotate(5deg); 
+    }
+    60% { 
+        transform: translateX(75%) translateY(50%) rotate(-5deg); 
+    }
+
+    75% {
+        transform: translateX(95%) translateY(60%) rotate(5deg); 
+    }
+
+    85% {
+        transform: translateX(110%) translateY(70%) rotate(-5deg); 
+    }
+
+    100% {
+        transform: translateX(130%) translateY(90%);
+        overflow: hidden;
+        /* visibility: hidden; */
+    }
+    
+};
+
+
 @media (min-width: 680px) {
     .next {
         font-size: 2rem;
