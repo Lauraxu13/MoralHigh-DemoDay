@@ -21,10 +21,9 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
   seconds: number = 8;
   private timer: any;
   character: string[];
-
-
   transition: boolean = false;
   animateSeconds: number = 5;
+  buttonHide: boolean = true;
 
 
 
@@ -51,6 +50,10 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
 
       this.showOpt = !this.showOpt;
       this.transition = !this.transition;
+      this.animationCountDown();
+      this.buttonHide = !this.buttonHide;
+
+
 
       console.log(this.total)
     } else {
@@ -85,8 +88,10 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
     this.service.setTScharisma(this.total.nice, this.total.bully)
 
     this.showOpt = !this.showOpt;
-    this.doAnimate = !this.doAnimate
-    this.transition = !this.transition
+    this.doAnimate = !this.doAnimate;
+    this.transition = !this.transition;
+    this.buttonHide = !this.buttonHide;
+
     this.animationCountDown();
     console.log(this.transition)
 
@@ -102,8 +107,10 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
     this.service.setTScharisma(this.total.nice, this.total.bully)
 
     this.showOpt = !this.showOpt;
-    this.doAnimate = !this.doAnimate
-    this.transition = !this.transition
+    this.doAnimate = !this.doAnimate;
+    this.transition = !this.transition;
+    this.buttonHide = !this.buttonHide;
+
     this.animationCountDown();
 
     console.log(this.total)

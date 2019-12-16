@@ -2,6 +2,8 @@
     width: 100vw;
     height: 100vh;
     margin: 0px;
+    overflow: none;
+
 }
 
 
@@ -36,7 +38,7 @@ img {
 .dialogue {
     position: absolute;
     top: 8%;
-    left: 35%;
+    left: 25%;
     width: 25%;
     height: auto;
     padding: 3%;

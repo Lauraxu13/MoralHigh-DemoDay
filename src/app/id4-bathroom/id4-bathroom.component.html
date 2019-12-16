@@ -12,11 +12,11 @@
         out of my way
       </p>
     </div>
-    <button class="next" (click)="nextButton()">Next</button>
+    <button class="next" *ngIf="buttonHide" (click)="nextButton()">Next</button>
 
     <div class="char meanGirl" *ngIf="!transition">
       <img [ngClass]="{ flip: !flip }" src="/assets/moralhighmeangirl.png" />
-      <img [ngClass]="{ animate: doAnimate }"  *ngIf="doAnimate" [ngClass]="{ flip: flip }"
+      <img [ngClass]="{ animate: doAnimate }" *ngIf="doAnimate" [ngClass]="{ flip: flip }"
         src="/assets/moralhighmeangirlTP.png" />
     </div>
   </div>
