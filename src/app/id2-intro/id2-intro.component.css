@@ -17,9 +17,10 @@
 
 .intro {
   width: auto;
-  height: 40%;
+  height: auto;
   padding: 10px;
   margin: 10px;
+
 
 }
 
@@ -75,7 +76,8 @@ p {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  width: 10%;
+  height: 40px;
+  width: 40px;
 }
 
 h3 {
@@ -118,9 +120,15 @@ h3 {
 
 @media (min-width: 680px) {
   .character {
-    height: 90px;
+    height: 150px;
+    width: 150px;
   }
 
+
+  .intro {
+    margin-left: 20px;
+
+  }
   .next {
     font-size: 2rem;
   }
@@ -131,7 +139,7 @@ h3 {
   }
 
   p {
-    font-size: 2rem;
+    font-size: 2.5rem;
     /* margin: 10px; */
     font-family: 'Gelasio', sans-serif;
   }

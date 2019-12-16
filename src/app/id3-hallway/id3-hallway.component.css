@@ -23,12 +23,14 @@
 .dialogue p {
   font-size: 1rem;
   padding: 2%;
+  font-family: 'Gelasio', sans-serif;
+
 }
 
 .dialogue.one {
   display: initial;
   position: absolute;
-  left: 10%;
+  left: 5%;
   top: 15%;
 }
 .dialogue.two {
@@ -59,11 +61,11 @@
 }
 
 
-
-/* .mainCharacter {
+/* 
+.mainCharacter {
   top: 18%;
   left: 30%;
-  width: 50%;
+  width: 60%;
   
 } */
 .characterParts {
@@ -164,11 +166,22 @@ img {
       font-size: 2rem;
   }
 
-
+  .characterParts {
+    top: 5%;
+    left: 25%;
+    position: absolute;
+    height: 100%;
+    width: 22%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain    ;
+    z-index: 10;
+  }
 
 .dialogue p {
   padding: 10%;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
+
   
 }
