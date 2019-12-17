@@ -4,20 +4,20 @@
 
   <header class="head">
     <img src="/assets/banner.png">
-    <h1>leaderBoard</h1>
+    <h1>Class List</h1>
   </header>
-  <main>
+  <div class="main">
     <ol class="scores">
       <li *ngFor="let row of leaderBoard">
 
-        {{row.name}} Result: {{row.personality}} popular: {{row.popular}} unpopular: {{row.unpopular}} nice:
-        {{row.nice}}
+        Name: {{row.name}} Result: {{row.personality}} popular: {{row.popular}} unpopular: {{row.unpopular}}
+        nice: {{row.nice}}
         nerd: {{row.nerd}} bully: {{row.bully}} jock: {{row.jock}}
 
 
       </li>
     </ol>
 
-  </main>
+  </div>
 
 </body>
