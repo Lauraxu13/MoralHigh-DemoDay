@@ -23,17 +23,13 @@ export class MasterService {
 
   highScore: number = 0;
 
-  transitionCounter: number = 0;
-
-  character: string[] = [
+   character: string[] = [
     "url('/assets/options/maincharskin2.png')",
     "url('/assets/options/mainchareye3.png')",
     "url('/assets/options/maincharhair4.png')",
     "url('/assets/options/maincharbottom1.png')",
     "url('/assets/options/mainchartop1.png')"
   ];
-
-
 
   body: any[] =
 
