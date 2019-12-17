@@ -67,7 +67,7 @@ button:hover {
 
 p{
     font-family: "Gelasio", sans-serif;
-
+    margin: 0;
 }
 
 @media (min-width: 680px) {

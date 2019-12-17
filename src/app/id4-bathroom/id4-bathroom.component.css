@@ -82,7 +82,7 @@ img {
 
 .dialogue2{
 margin-top: 2%;
-height: 5%;
+height: auto;
 width: 70%;
 background-color: rgb(255, 255, 255, 0.8);
 border-radius: 20px;

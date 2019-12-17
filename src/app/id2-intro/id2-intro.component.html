@@ -3,7 +3,7 @@
     <div class="intro">
       <h3>Hello!</h3>
       <p>
-        Meet {{ name }} Today is her first day of high school at MHS. Will
+        Meet {{ name }}. <br> Today is her first day of high school at MHS. Will
         you help her? Choose her outfit for the day and then help her navigate
         the hallways. How will YOU be remembered?
       </p>
@@ -15,66 +15,42 @@
     </div>
 
     <div class="mainCharacter">
-      <div
-        class="characterParts"
-        *ngFor="let part of character; index as i"
-        [style.background-image]="part"
-      ></div>
+      <div class="characterParts" *ngFor="let part of character; index as i" [style.background-image]="part"></div>
     </div>
-    
+
   </div>
 
   <div class="right">
     <div class="allParts">
       <div class="body flex">
         <h3>Body</h3>
-        <div
-          class="character"
-          *ngFor="let part of body; index as i"
-          [style.background-image]="part.prev"
-          (click)="setBody(i)"
-        ></div>
+        <div class="character" *ngFor="let part of body; index as i" [style.background-image]="part.prev"
+          (click)="setBody(i)"></div>
       </div>
       <div class="eye flex">
         <h3>Eyes</h3>
-        <div
-          class="character"
-          *ngFor="let part of eye; index as i"
-          [style.background-image]="part.prev"
-          (click)="setEye(i)"
-        ></div>
+        <div class="character" *ngFor="let part of eye; index as i" [style.background-image]="part.prev"
+          (click)="setEye(i)"></div>
       </div>
       <div class="hair flex">
         <h3>Hair</h3>
-        <div
-          class="character"
-          *ngFor="let part of hair; index as i"
-          [style.background-image]="part.prev"
-          (click)="setHair(i)"
-        ></div>
+        <div class="character" *ngFor="let part of hair; index as i" [style.background-image]="part.prev"
+          (click)="setHair(i)"></div>
       </div>
       <div class="bottom flex">
         <h3>Bottom</h3>
-        <div
-          class="character"
-          *ngFor="let part of bottom; index as i"
-          [style.background-image]="part.prev"
-          (click)="setBottom(i)"
-        ></div>
+        <div class="character" *ngFor="let part of bottom; index as i" [style.background-image]="part.prev"
+          (click)="setBottom(i)"></div>
       </div>
       <div class="top flex">
         <h3>Top</h3>
-        <div
-          class="character"
-          *ngFor="let part of top; index as i"
-          [style.background-image]="part.prev"
-          (click)="setTop(i)"
-        ></div>
+        <div class="character" *ngFor="let part of top; index as i" [style.background-image]="part.prev"
+          (click)="setTop(i)"></div>
       </div>
     </div>
     <div class="buttonRight">
-        <button class="next" (click)="nextButton()">next</button>
-      </div>
+      <button class="next" (click)="nextButton()">next</button>
+    </div>
   </div>
 
 </div>
