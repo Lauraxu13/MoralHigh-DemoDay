@@ -20,25 +20,30 @@ html{
 
 .dialogue.hide.helped{
     display:initial;
-    position: absolute;
-    top: 8%;
-    left: 38%;
-    width: 25%;
-    height: auto;
-    padding: 3%;
-    border-radius: 50%;
-    background-color: rgb(255, 255, 255, 0.8);
-    display: flex;
-    justify-content: center;
-}
-
-.dialogue > p {
-    font-size: 1rem;
-    padding: 1%;
-    font-family: 'Gelasio', sans-serif;
     
    
 }
+
+.dialogue > p {
+    font-size: 0.7rem;
+    padding: 1%;
+    font-family: 'Gelasio', sans-serif;
+    position: absolute;
+    top: 8%;
+    left: 35%;
+    /* word-wrap: break-word; */
+    width: 15%;
+    height: 25%;
+    padding: 3%;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255, 0.8);
+    /* box-sizing: border-box; */
+    /* text-overflow: clip; */
+}
+    
+   
+
 
 .gym2 {
     position: absolute;
@@ -153,7 +158,7 @@ img {
 @media only screen and (min-width: 680px){
 
     .dialogue > p {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     }
 
     button {
