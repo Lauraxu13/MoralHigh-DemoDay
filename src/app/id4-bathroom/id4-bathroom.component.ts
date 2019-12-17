@@ -149,6 +149,5 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     clearTimeout(this.timer);
-
   }
 }

@@ -9,17 +9,14 @@ import { TotalScore } from '../total-score';
   styleUrls: ['./id8-leaderboard.component.css']
 })
 export class Id8LeaderboardComponent implements OnInit {
-  leaderBoard:[];
+  leaderBoard: [];
   constructor(private router: Router, private service: MasterService) { }
 
 
-  tryAgain(){
-    this.router.navigate(["home"]);
-  }
 
   ngOnInit() {
-    this.service.getLeaderBoard().subscribe(leaderBoard=>{
-        this.leaderBoard=leaderBoard
+    this.service.getLeaderBoard().subscribe(leaderBoard => {
+      this.leaderBoard = leaderBoard
     });
   }
 

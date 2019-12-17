@@ -7,7 +7,7 @@ export interface TotalScore {
     nerd: number;
     jock: number;
     personality: string;
-    
+
 
 
 }
