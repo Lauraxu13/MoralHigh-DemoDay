@@ -1,3 +1,13 @@
+i{
+position: absolute;
+right: 0;
+font-size: 3rem;
+}
+
+.off{
+  display: none;
+}
+
 
 .landAndUp {
   display: none;

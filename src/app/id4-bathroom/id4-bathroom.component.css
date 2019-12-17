@@ -265,14 +265,14 @@ font-family: 'Gelasio', sans-serif;
 
   .dialogue p {
     padding: 10%;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   .dialogue2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .bathroom2 button {
-    font-size: 2rem;
+    font-size: 2 rem;
 }
 
 .timer p {
