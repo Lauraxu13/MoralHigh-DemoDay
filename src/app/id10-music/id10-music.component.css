@@ -1,0 +1,20 @@
+button .a {
+    display: none;
+  }
+  
+  button.mute .a{
+    display: initial
+  }
+  
+  button.mute .b{
+    display: none;
+  }
+
+  button {
+      border: none;
+      background: none;
+  }
+
+  i{
+      font-size: 1rem;
+  }

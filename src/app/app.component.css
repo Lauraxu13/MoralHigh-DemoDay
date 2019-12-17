@@ -1,23 +1,11 @@
-i{
-position: absolute;
-right: 0;
-font-size: 3rem;
-}
-
-.off{
-  display: none;
-}
-
-
 .landAndUp {
   display: none;
 }
 
 .portrait {
-  font-family: 'Notable', sans-serif;
-text-align: center;
-text-shadow: 2px 2px white;
-
+  font-family: "Notable", sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px white;
 }
 
 p {
@@ -32,11 +20,14 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-
-
-
 }
+
+.music {
+  position: absolute;
+  z-index: 10;
+}
+
+
 
 @media only screen and (min-device-width: 480px) and (max-device-width: 640px) and (orientation: landscape) {
   .portraitMode {

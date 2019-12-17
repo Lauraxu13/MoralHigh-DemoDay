@@ -1,5 +1,12 @@
-
-
-<div class="audio"(click)="toggleSound()" >
-    <i  class="fas fa-volume-mute" [ngClass]= "{off: off}" ></i> <i class="fas fa-volume-down" [ngClass]="{off: !off}"></i></div>
-    
+<button
+  (click)="toggleSound()"
+  [ngClass]="{ mute: mute }"
+  class="audio"
+>
+  <span class="a">
+    <i class="fas fa-volume-mute"></i>
+  </span>
+  <span class="b">
+    <i class="fas fa-volume-down"></i>
+  </span>
+</button>
