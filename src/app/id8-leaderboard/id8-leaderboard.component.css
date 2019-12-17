@@ -1,20 +1,66 @@
 
+.grad{
+  background-color: #CECECE;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.head{
+  text-align: center;
+  font-family: 'Notable', sans-serif;
+}
+
+h1 {
+  text-shadow: 2px 2px white;
+
+}
+
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.scores {
+  list-style: none;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gelasio", sans-serif;
+  counter-reset: my-awesome-counter;
+}
+
+.scores li::before {
+  /* content: counter(my-awesome-counter) ; */
+  color: red;
+  font-weight: bold;
+  margin: 10px;
+}
 .scores li{
-    
-    
     border: 1px solid;
     border-radius: 50px;
     padding: 10px;
     margin: 10px;
     transition: width 0.1s;
-    width: 80px;
+    width: 180px;
     background: rgba(141,14,2,1);
     overflow: hidden;
     text-overflow: ellipsis;
     height: 10px;
     text-align-last: justify;
     color: white;
+    counter-increment: my-awesome-counter;
+
 }
 .scores li:hover{
     
@@ -35,33 +81,14 @@
 }
 
 
-ol {
-    list-style: none;
-    padding: 10px;
-    counter-reset: my-awesome-counter;
-  }
-  ol li {
-    counter-increment: my-awesome-counter;
-  }
-  ol li::before {
-    /* content: counter(my-awesome-counter) ; */
-    color: red;
-    font-weight: bold;
-    margin: 10px;
-  }
-  img{
+ img{
     width: 50%;
     height: auto;
 }
-.head{
-  text-align: center;
-  font-family: 'Notable', sans-serif;
-}
 
-.grad{
-  background-color: #CECECE;
-  
-}
+
+
+
 button {
   background-color: #A00100;
   border: 2px solid black;
@@ -79,10 +106,9 @@ button {
   border-radius: 10px;
   font-size: 1rem;
   z-index: 10;
-  
   position: relative;
-  
-    left: 500px;
+  right: 0;
+  left: 40%;
 }
 button:hover { 
   transform: scale(1.1); 
@@ -117,14 +143,8 @@ button:hover {
     
   }
 
-  main{
-    position: relative;
-    left: 100px;
-  }
 
   .scores li{
-    
-    
     border: 1px solid;
     border-radius: 50px;
     padding: 20px;
