@@ -6,13 +6,13 @@
 
     <form (ngSubmit)="newPlayer(form.value.name)" #form="ngForm">
         <label for="name">Name Your Character
-            <input #name="ngModel" (ngModel)="(name)" pattern="[A-Za-z]*" type="text" placeholder="Name"
-                name="name"></label>
+            <input #name="ngModel" (ngModel)="(name)" pattern="[A-Za-z]*" type="text" placeholder="Name" name="name"
+                required></label>
 
         <div *ngIf="!name?.valid  && (name?.dirty || name?.touched) && name.errors.pattern" class="valid">
             <p> Please enter a name that is only letters</p>
         </div>
-        <button type="submit">Start</button>
+        <button type="submit" [disabled]="form.invalid">Start</button>
     </form>
 
 

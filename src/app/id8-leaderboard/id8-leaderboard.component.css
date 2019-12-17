@@ -61,9 +61,61 @@ ol {
   background-color: #CECECE;
   
 }
+button {
+  background-color: #A00100;
+  border: 2px solid black;
+  color: white;
+  font-family: 'Notable', sans-serif;
+  text-shadow: 2px 2px black;
+  letter-spacing: 10px;
+  text-align: center;
+  transition: transform .2s; 
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  width: 20%;
+  border-radius: 10px;
+  font-size: 1rem;
+  z-index: 10;
+  
+  position: relative;
+  
+    left: 500px;
+}
+button:hover { 
+  transform: scale(1.1); 
+  
+}
 
 
 @media only screen and (min-width: 680px){
+  button {
+    background-color: #A00100;
+    border: 2px solid black;
+    color: white;
+    font-family: 'Notable', sans-serif;
+    text-shadow: 2px 2px black;
+    letter-spacing: 10px;
+    text-align: center;
+    transition: transform .2s; 
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 20%;
+    border-radius: 10px;
+    font-size: 1rem;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    left:auto;
+  }
+  button:hover { 
+    transform: scale(1.1); 
+    
+  }
+
   main{
     position: relative;
     left: 100px;

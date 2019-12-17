@@ -11,17 +11,11 @@ import { TotalScore } from '../total-score';
 export class Id8LeaderboardComponent implements OnInit {
   leaderBoard:[];
   constructor(private router: Router, private service: MasterService) { }
-  // newEL(i:TotalScore){
-  //   while(true){
-  //     let count =0
-  //     if(count<this.leaderBoard.length){
-  //        this.leaderBoard.unshift()
-  //     }else{
-  //       break;
-  //     }
-     
-  //   }
-  // }
+
+
+  tryAgain(){
+    this.router.navigate(["home"]);
+  }
 
   ngOnInit() {
     this.service.getLeaderBoard().subscribe(leaderBoard=>{

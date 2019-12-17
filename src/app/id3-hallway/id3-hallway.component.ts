@@ -1,13 +1,20 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, HostBinding } from "@angular/core";
 import { Router } from "@angular/router";
 import { MasterService } from '../master.service';
+import { routeFadeStateTrigger } from '../route-animations';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: "app-id3-hallway",
   templateUrl: "./id3-hallway.component.html",
-  styleUrls: ["./id3-hallway.component.css"]
+  styleUrls: ["./id3-hallway.component.css"],
+  animations: []
 })
 export class Id3HallwayComponent implements OnInit {
+
+
+
+
   nextCounter: number = 0;
 
   showDialogue: boolean = false;
