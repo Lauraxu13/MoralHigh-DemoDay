@@ -26,6 +26,7 @@ export class MasterService {
   transitionCounter: number = 0;
 
   character: string[] = [
+    "url('/assets/options/mainchardefault.png')",
     "url('/assets/options/maincharskin2.png')",
     "url('/assets/options/mainchareye3.png')",
     "url('/assets/options/maincharhair4.png')",
