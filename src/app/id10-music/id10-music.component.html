@@ -1,6 +1,6 @@
 <button
-  (click)="toggleSound()"
-  [ngClass]="{ mute: mute }"
+  (click)="toggleThatSound()"
+  [ngClass]="{ mute: musicService.mute }"
   class="audio"
 >
   <span class="a">

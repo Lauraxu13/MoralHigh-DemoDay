@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { MusicService } from '../music.service';
 
 @Component({
   selector: "app-id10-music",
@@ -6,19 +7,28 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./id10-music.component.css"]
 })
 export class Id10MusicComponent implements OnInit {
-  mute: boolean = true;
-  backMusic = new Audio("assets/flatZone.mp3");
+  // mute: boolean = true;
+  // backMusic = new Audio("assets/flatZone.mp3");
 
-  toggleSound() {
-    this.mute = !this.mute;
-    if (this.mute === true) {
-      this.backMusic.pause();
-    } else {
-      this.backMusic.play();
-    }
+  // toggleSound() {
+  //   this.mute = !this.mute;
+  //   if (this.mute === true) {
+  //     this.backMusic.pause();
+  //   } else {
+  //     this.backMusic.play();
+  //   }
+  // }
+
+  constructor( private musicService: MusicService) {
+
+    
   }
 
-  constructor() {}
+  toggleThatSound(){
+    
+    this.musicService.toggleSound();
+  }
+  ngOnInit() {
 
-  ngOnInit() {}
+  }
 }
