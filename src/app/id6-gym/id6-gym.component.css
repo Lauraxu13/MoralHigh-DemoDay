@@ -36,7 +36,7 @@ html{
     font-size: 1rem;
     padding: 1%;
     font-family: 'Gelasio', sans-serif;
-    
+    text-align: center;
    
 }
 
@@ -65,14 +65,15 @@ html{
     
 .gym2 button {
     width: 50%;
-    height: 10%;       
+    height: auto;       
     margin: 0 auto;
     margin-top: 5%;
     margin-bottom: 5%;
     background-color: rgb(255, 255, 255, 0.8);
     border-radius: 10px;
     font-weight: 800;
-
+    padding-top: 20px;
+    padding-bottom: 20px;
     
     }
 

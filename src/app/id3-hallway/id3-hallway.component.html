@@ -1,7 +1,10 @@
 <div class="body">
   <div class="content">
     <div class="dialogue" [ngClass]="{ one: !showDialogue }">
-      <p>Hey, Blake! </p>
+      <p>What a relief, here comes my best friend.
+        <br>
+        <br>Hey, Blake!
+      </p>
     </div>
 
     <div class="mainCharacter">
@@ -10,7 +13,7 @@
 
 
     <div class="dialogue two" [ngClass]="{ two: showDialogue }">
-      <p>OMG! {{name}} I NEEEED you in the bathroom with me now! My makeup is a wreak!</p>
+      <p>OMG! {{name}} I NEEEED you in the bathroom with me right now! My makeup is a wreck!</p>
     </div>
     <div class="friend" [ngClass]="{ animate: doAnimate }" *ngIf="doAnimate">
       <img src="/assets/moralhighfriend.png" />
