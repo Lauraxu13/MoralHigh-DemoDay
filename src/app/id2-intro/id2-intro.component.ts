@@ -13,7 +13,7 @@ export class Id2IntroComponent implements OnInit {
   name: string;
   total: TotalScore;
 
-  character: string[] = new Array(5);
+  character: string[] = new Array(6);
 
   body: any[];
   eye: any[];
@@ -34,26 +34,26 @@ export class Id2IntroComponent implements OnInit {
 
 
   setBody(i: number) {
-    this.character[0] = this.body[i].main;
+    this.character[1] = this.body[i].main;
     console.log(this.body[i].main);
     console.log(this.character)
   }
 
   setEye(i: number) {
-    this.character[1] = this.eye[i].main;
+    this.character[2] = this.eye[i].main;
     console.log(this.character)
   }
   setHair(i: number) {
-    this.character[2] = this.hair[i].main;
+    this.character[3] = this.hair[i].main;
     console.log(this.character)
   }
   setBottom(i: number) {
-    this.character[3] = this.bottom[i].main;
+    this.character[4] = this.bottom[i].main;
     console.log(this.character)
   }
 
   setTop(i: number) {
-    this.character[4] = this.top[i].main;
+    this.character[5] = this.top[i].main;
     console.log(this.character)
   }
 

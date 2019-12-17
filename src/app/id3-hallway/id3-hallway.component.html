@@ -1,24 +1,24 @@
 <div class="body">
-  <div class="content">
-    <div class="dialogue" [ngClass]="{ one: !showDialogue }">
-      <p>What a relief, here comes my best friend.
-        <br>
-        <br>Hey, Blake!
-      </p>
-    </div>
-
-    <div class="mainCharacter">
-      <div class="characterParts" *ngFor="let part of character; index as i" [style.background-image]="part"></div>
-    </div>
-
-
-    <div class="dialogue two" [ngClass]="{ two: showDialogue }">
-      <p>OMG! {{name}} I NEEEED you in the bathroom with me right now! My makeup is a wreck!</p>
-    </div>
-    <div class="friend" [ngClass]="{ animate: doAnimate }" *ngIf="doAnimate">
-      <img src="/assets/moralhighfriend.png" />
-    </div>
-
-    <button type="button" class="next" (click)="nextButton()">Next</button>
+  <!-- <div class="content"> -->
+  <div class="dialogue" [ngClass]="{ one: !showDialogue }">
+    <p>What a relief, here comes my best friend.
+      <br>
+      <br>Hey, Blake!
+    </p>
   </div>
+
+  <div class="mainCharacter">
+    <div class="characterParts" *ngFor="let part of character; index as i" [style.background-image]="part"></div>
+  </div>
+
+
+  <div class="dialogue two" [ngClass]="{ two: showDialogue }">
+    <p>OMG! {{name}} I NEEEED you in the bathroom with me right now! My makeup is a wreck!</p>
+  </div>
+  <div class="friend" [ngClass]="{ animate: doAnimate }" *ngIf="doAnimate">
+    <img src="/assets/moralhighfriend.png" />
+  </div>
+
+  <button type="button" class="next" (click)="nextButton()">Next</button>
+  <!-- </div> -->
 </div>

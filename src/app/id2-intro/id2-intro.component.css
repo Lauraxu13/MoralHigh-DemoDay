@@ -10,19 +10,28 @@
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: auto;
+  height: 100vh;
+}
+
+h1{
+  font-size: 3vw;
+    margin: 5px;
+    font-family: "Notable", sans-serif;
+    text-shadow: 2px 2px white;
+    margin-top: 0px;
+
 }
 
 .intro {
   width: auto;
-  height: 40%;
+  height: 50%;
   padding: 10px;
   margin: 10px;
 }
 
 p {
   margin: 3px;
-  font-size: 0.8rem;
+  font-size: 2vw;
   font-family: "Gelasio", sans-serif;
 }
 
@@ -47,18 +56,19 @@ p {
 /* WHOLE RIGHT SIDE */
 .right {
   width: 50%;
-  height: auto;
+  height: 95%;
   padding-top: 10px;
   padding-left: 5px;
   padding-right: 5px;
   display: flex;
   flex-direction: column;
 }
-
+/* 
 .allParts {
   display: flex;
   flex-direction: column;
-}
+  height: auto;
+} */
 
 .flex {
   display: flex;
@@ -66,6 +76,7 @@ p {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
+  height: 50%;
 }
 
 .character {
@@ -74,36 +85,32 @@ p {
   background-position: center;
   background-size: contain;
   width: 20%;
-  height: 45px;
+  height: 70%;
   padding: 2px;
   background-color: rgba(245, 245, 245, 0.5);
   border-radius: 10px;
   border: #a00100 2px solid;
 }
 
-h3 {
-  margin: 5px;
-  font-family: "Notable", sans-serif;
-  text-shadow: 2px 2px white;
-  font-size: 1rem;
-  margin-top: 0px;
-}
 
+/* 
 .buttonRight {
   display: flex;
   align-self: flex-end;
   width: 50%;
-}
+  margin: 0;
+} */
 .next {
-  margin: 5px;
-  margin-top: 10px;
+  /* margin: 5px; */
+  margin-top: 5px;
   padding-top: 5px;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
   margin-right: 20px;
   background-color: #a00100;
-  width: 100%;
+  width: 50%;
+  align-self: flex-end;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 2.5vw;
   z-index: 10;
   color: white;
   border: 2px solid black;
@@ -120,28 +127,26 @@ h3 {
 }
 
 @media (min-width: 680px) {
-  .character {
-    height: 150px;
-  }
 
-  .next {
+
+  /* .next {
     font-size: 2rem;
   }
 
   h3 {
     font-size: 2rem;
-  }
+  } */
 
-  p {
-    font-size: 2rem;
+  /* p {
+    font-size: 1.5rem;
     margin: 20px;
     font-family: "Gelasio", sans-serif;
-  }
-
+  } */
+/* 
   .characterParts {
     position: absolute;
     top: 40%;
     height: 60%;
     width: 30%;
-  }
+  } */
 }

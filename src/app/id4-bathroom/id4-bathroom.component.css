@@ -60,7 +60,7 @@ img {
   
   }
   .dialogue p {
-    font-size: 1rem;
+    font-size: 2vw;
     padding: 1%;
     font-family: 'Gelasio', sans-serif;
     text-align: center;
@@ -87,7 +87,7 @@ width: 70%;
 background-color: rgb(255, 255, 255, 0.8);
 border-radius: 20px;
 padding: 5% 1% 5% 1%;
-font-size: 1rem;
+font-size: 2vw;
 font-weight: 800;
 text-align: center;
 font-family: 'Gelasio', sans-serif;
@@ -98,7 +98,7 @@ font-family: 'Gelasio', sans-serif;
 .timer {
     border-radius: 100%;
     border: 2px solid black;
-    font-size: 1em;
+    font-size: 1.5vw;
     margin: 0%;
     margin-top: 2%;
     width: 10%;
@@ -122,7 +122,7 @@ font-family: 'Gelasio', sans-serif;
     background-color: rgb(255, 255, 255, 0.8);
     border-radius: 10px;
     font-weight: 800;
-
+    font-size: 2vw;
 
 
 }
@@ -142,18 +142,18 @@ font-family: 'Gelasio', sans-serif;
     text-align: center;
     transition: transform .2s; 
     position: absolute;
+    z-index: 10;
     top: 85%;
     left: 75%;
     padding-left: 2%;
     padding-right: 2%;
     padding-top: 1%;
     padding-bottom: 1%;
-    width: 20%;
+    width: auto;
     border-radius: 10px;
-    font-size: 1rem;
-    z-index: 10;
+    font-size: 2.5vw;
   }
-
+  
   .next:hover { 
     transform: scale(1.1); 
   }
@@ -249,7 +249,7 @@ font-family: 'Gelasio', sans-serif;
     }
 
     95% {
-        transform: translateX(250%) translateY(70%) rotate(5deg)scale(1.7); 
+        transform: translateX(250%) translateY(80%) rotate(5deg)scale(1.7); 
     }
 
     100% {
@@ -262,7 +262,7 @@ font-family: 'Gelasio', sans-serif;
 
 
 @media (min-width: 680px) {
-    .next {
+    /* .next {
         font-size: 2rem;
     }
   
@@ -280,6 +280,6 @@ font-family: 'Gelasio', sans-serif;
 }
 
 .timer p {
-    font-size: 2em;
-}
+    font-size: 2em; */
+/* } */
   }

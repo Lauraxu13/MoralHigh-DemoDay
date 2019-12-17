@@ -53,7 +53,7 @@ img {
 }
 
 .dialogue > p {
-    font-size: 1rem;
+    font-size: 2vw;
     padding: 1%;
     font-family: 'Gelasio', sans-serif;
 text-align: center;
@@ -79,7 +79,7 @@ text-align: center;
 .hw2 > p {
     margin: 0 auto;
     margin-top: 10%;
-    font-size: 20px;
+    font-size: 2vw;
     background-color: rgb(255, 255, 255, 0.8);
     border-radius: 20px;
     padding: 50px;
@@ -92,10 +92,11 @@ text-align: center;
     width: 50%;
     height: auto;       
     margin: 0 auto;
+    font-size: 2vw;
     margin-top: 5%;
     margin-bottom: 5%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
     background-color: rgb(255, 255, 255, 0.8);
     border-radius: 10px;
     font-weight: 800;
@@ -103,28 +104,27 @@ text-align: center;
     
     }
 
-.next {
-    background-color: #A00100;
-    border: 2px solid black;
-    color: white;
-    font-family: 'Notable', sans-serif;
-    text-shadow: 2px 2px black;
-    letter-spacing: 10px;
-    text-align: center;
-    transition: transform .2s; 
-    position: absolute;
-    top: 85%;
-    left: 75%;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    width: 20%;
-    border-radius: 10px;
-    font-size: 1rem;
-    z-index: 10;
-  }
-
+    .next {
+        background-color: #A00100;
+        border: 2px solid black;
+        color: white;
+        font-family: 'Notable', sans-serif;
+        text-shadow: 2px 2px black;
+        letter-spacing: 10px;
+        text-align: center;
+        transition: transform .2s; 
+        position: absolute;
+        z-index: 10;
+        top: 85%;
+        left: 75%;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        width: auto;
+        border-radius: 10px;
+        font-size: 2.5vw;
+      }
 .next:hover { 
     transform: scale(1.1); 
   }
@@ -186,7 +186,7 @@ text-align: center;
 };
 
 @media only screen and (min-width: 680px){
-    .dialogue >p{
+    /* .dialogue >p{
         font-size: 1.5rem;
     }
 
@@ -197,6 +197,6 @@ text-align: center;
     .hw2 button {
         font-size: 2.5rem;
         
-        }
+        } */
 
 }
