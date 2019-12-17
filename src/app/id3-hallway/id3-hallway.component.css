@@ -19,7 +19,7 @@
   display: none;
   width: 20%;
   height: auto;
-  padding: 2%;
+  padding: 3%;
   border-radius: 50%;
   background-color: rgb(255, 255, 255, 0.8);
 
@@ -29,6 +29,7 @@
   font-size: 1rem;
   padding: 2%;
   font-family: 'Gelasio', sans-serif;
+  text-align: center;
 
 }
 
@@ -41,7 +42,7 @@
 .dialogue.two {
   display: initial;
   position: absolute;
-  left: 75%;
+  left: 72%;
   animation: 3s fadeIn;
   animation-fill-mode: forwards;
 }
@@ -169,7 +170,7 @@ img {
 
 
 .dialogue p {
-  padding: 10%;
+  padding: 5%;
   font-size: 1.5rem;
 }
 

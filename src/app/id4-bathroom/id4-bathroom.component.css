@@ -63,7 +63,7 @@ img {
     font-size: 1rem;
     padding: 1%;
     font-family: 'Gelasio', sans-serif;
-
+    text-align: center;
   }
 
 
@@ -82,7 +82,7 @@ img {
 
 .dialogue2{
 margin-top: 2%;
-height: 5%;
+height: auto;
 width: 70%;
 background-color: rgb(255, 255, 255, 0.8);
 border-radius: 20px;
@@ -248,8 +248,12 @@ font-family: 'Gelasio', sans-serif;
         transform: translateX(180%) translateY(70%) rotate(-5deg)scale(1.6); 
     }
 
+    95% {
+        transform: translateX(250%) translateY(70%) rotate(5deg)scale(1.7); 
+    }
+
     100% {
-        transform: translateX(200%) translateY(90%) scale(1.7);
+        transform: translateX(300%) translateY(90%) scale(1.8);
         overflow: hidden;
         /* visibility: hidden; */
     }
@@ -264,15 +268,15 @@ font-family: 'Gelasio', sans-serif;
   
 
   .dialogue p {
-    padding: 10%;
+    padding: 5%;
     font-size: 1.5rem;
   }
 
   .dialogue2 {
-    font-size: 1.5rem;
+    font-size: 2em;
   }
   .bathroom2 button {
-    font-size: 2 rem;
+    font-size: 2rem;
 }
 
 .timer p {

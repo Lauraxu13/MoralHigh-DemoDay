@@ -11,10 +11,15 @@
 
 h1 {
     text-shadow: 2px 2px white;
-    margin: 50px;
+    margin: 30px;
 }
 
+p {
+    font-family: 'Gelasio', sans-serif;
+    width: 80%;
+    text-align: center;
 
+}
 button {
     background-color: #A00100;
     border: 2px solid black;
@@ -48,6 +53,10 @@ button:hover {
         font-size: 4rem;
         margin: 100px;
 
+    }
+
+    p{
+        font-size: 2rem;
     }
 
 }
