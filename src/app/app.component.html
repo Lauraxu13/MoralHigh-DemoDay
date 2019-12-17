@@ -1,18 +1,15 @@
 <div class="portraitMode">
   <p>🙃</p>
-  <h1 class="portrait"> please flip to landscape to play </h1>
+  <h1 class="portrait">please flip to landscape to play</h1>
   <p>🙃</p>
 </div>
-<div class="audio"(click)="toggleSound()" >
-<i  class="fas fa-volume-mute" [ngClass]= "{off: off}" ></i> <i class="fas fa-volume-down" [ngClass]="{off: !off}"></i></div>
 
 
+ 
 <div class="landAndUp">
-  <router-outlet>
-
-  </router-outlet>
+  <app-id10music></app-id10music>
+  <router-outlet> </router-outlet>
 </div>
-
 
 <!-- <audio controls autoplay id= "backmusic">
     <source src="/assets/flatZone.mp3" type="audio/mpeg">

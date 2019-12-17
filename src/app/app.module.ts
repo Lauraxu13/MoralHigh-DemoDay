@@ -14,6 +14,7 @@ import { Id6GymComponent } from "./id6-gym/id6-gym.component";
 import { Id7ScoringComponent } from "./id7-scoring/id7-scoring.component";
 import { Id8LeaderboardComponent } from './id8-leaderboard/id8-leaderboard.component';
 import { Id9TransitionComponent } from './id9-transition/id9-transition.component';
+import { Id10MusicComponent } from './id10-music/id10-music.component';
 
 
 @NgModule({
@@ -28,6 +29,8 @@ import { Id9TransitionComponent } from './id9-transition/id9-transition.componen
     Id7ScoringComponent,
     Id8LeaderboardComponent,
     Id9TransitionComponent,
+    Id10MusicComponent,
+    
     
     
   ],
