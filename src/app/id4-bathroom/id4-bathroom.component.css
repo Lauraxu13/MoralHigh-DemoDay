@@ -2,6 +2,8 @@
     width: 100vw;
     height: 100vh;
     margin: 0px;
+    overflow: hidden;
+
 }
 
 
@@ -20,6 +22,8 @@
     background-position: center;
     background-size: contain    ;
     z-index: 5;
+    overflow: hidden;
+
 }
 .char.meanGirl {
     height: 90%;
@@ -170,31 +174,31 @@ font-family: 'Gelasio', sans-serif;
     }
 
     20% {
-        transform: translateX(30%) translateY(-2px) rotate(5deg); 
+        transform: translateX(20%) translateY(-2px) rotate(5deg); 
     }
     30% {
-        transform: translateX(40%) translateY(-2px) rotate(-5deg); 
+        transform: translateX(30%) translateY(-2px) rotate(-5deg); 
     }
     45% {
         transform: translateX(50%) translateY(-2px) rotate(5deg) ; 
     }
     60% { 
-        transform: translateX(90%) translateY(-2px) rotate(-5deg); 
+        transform: translateX(70%) translateY(-2px) rotate(-5deg); 
 
     }
 
     75% {
-        transform: translateX(120%) translateY(-2px) rotate(5deg); 
+        transform: translateX(100%) translateY(-2px) rotate(5deg); 
     
     }
 
     85% {
-        transform: translateX(150%) translateY(-2px) rotate(-5deg); 
+        transform: translateX(120%) translateY(-2px) rotate(-5deg); 
     
     }
 
     100% {
-        transform: translateX(300%) translateY(-2px);
+        transform: translateX(130%) translateY(-2px);
         overflow: hidden;
         /* visibility: hidden; */
     }

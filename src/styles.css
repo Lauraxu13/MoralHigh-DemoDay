@@ -11,7 +11,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    overflow: none;
+    overflow: hidden;
 
 }
 
@@ -25,7 +25,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    overflow: none;
+        overflow: hidden;
+
 
 
 }
@@ -37,7 +38,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    overflow: none;
+    overflow: hidden;
+
 
 
 }
@@ -50,7 +52,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    overflow: none;
+    /* overflow: hidden; */
+
 
 
 }
