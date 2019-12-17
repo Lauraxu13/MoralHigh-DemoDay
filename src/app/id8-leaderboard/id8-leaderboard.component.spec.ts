@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Id8LeaderboardComponent } from './id8-leaderboard.component';
 
-describe('Id8LeaderboardComponent', () => {
+xdescribe('Id8LeaderboardComponent', () => {
   let component: Id8LeaderboardComponent;
   let fixture: ComponentFixture<Id8LeaderboardComponent>;
 

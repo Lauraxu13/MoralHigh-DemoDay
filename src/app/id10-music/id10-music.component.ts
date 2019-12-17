@@ -19,7 +19,7 @@ export class Id10MusicComponent implements OnInit {
   //   }
   // }
 
-  constructor( private musicService: MusicService) {
+  constructor( public musicService: MusicService) {
 
     
   }

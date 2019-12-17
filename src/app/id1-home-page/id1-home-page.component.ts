@@ -25,7 +25,7 @@ export class Id1HomePageComponent implements OnInit {
     
   }
 
-  constructor(private router: Router, private service: MasterService, private musicService: MusicService) { }
+  constructor(private router: Router, private service: MasterService, public musicService: MusicService) { }
 
   ngOnInit() {
   }
