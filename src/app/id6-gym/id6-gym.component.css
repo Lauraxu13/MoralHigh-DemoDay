@@ -1,10 +1,6 @@
-html {
-  font-size: 100%;
-}
 .body {
   width: 100vw;
   height: 100vh;
-  margin: 0px;
 }
 
 .dialogue.hide {
@@ -45,15 +41,6 @@ html {
   justify-content: center;
 }
 
-.gym2 > p {
-  margin: 0 auto;
-  margin-top: 10%;
-  font-size: 2vw;
-  background-color: rgb(255, 255, 255, 0.8);
-  border-radius: 20px;
-  padding: 50px;
-}
-
 .gym2 button {
   width: 50%;
   height: auto;
@@ -66,11 +53,6 @@ html {
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 2vw;
-}
-
-.char {
-  height: 80%;
-  position: absolute;
 }
 
 .characterParts {
@@ -88,6 +70,8 @@ html {
 .meanGirl {
   top: 15%;
   left: 20%;
+  height: 80%;
+  position: absolute;
 }
 
 img {

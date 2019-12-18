@@ -23,13 +23,7 @@ export class MasterService {
 
   highScore: number = 0;
 
-
-
-
-
   private readonly BASE_URL = environment.playerBaseUrl
-
-
 
   constructor(private http: HttpClient) { }
   // set name from home page form to service

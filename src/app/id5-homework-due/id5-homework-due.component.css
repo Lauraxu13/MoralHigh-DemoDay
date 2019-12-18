@@ -1,13 +1,7 @@
 .body {
   width: 100vw;
   height: 100vh;
-  margin: 0px;
   overflow: none;
-}
-
-.char {
-  height: 80%;
-  position: absolute;
 }
 
 .characterParts {
@@ -23,6 +17,8 @@
 }
 
 .teacher {
+  position: absolute;
+  height: 80%;
   top: 15%;
   left: 5%;
 }
@@ -40,9 +36,7 @@ img {
   padding: 3%;
   border-radius: 50%;
   background-color: rgb(255, 255, 255, 0.8);
-  display: flex;
-  justify-content: center;
-}
+  }
 
 .dialogue.hide {
   display: none;
@@ -69,15 +63,6 @@ img {
   font-weight: 800;
 }
 
-.hw2 > p {
-  margin: 0 auto;
-  margin-top: 10%;
-  font-size: 2vw;
-  background-color: rgb(255, 255, 255, 0.8);
-  border-radius: 20px;
-  padding: 50px;
-  font-weight: 800;
-}
 
 .hw2 button {
   width: 50%;

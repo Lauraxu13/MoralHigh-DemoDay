@@ -18,7 +18,7 @@ export class Id3HallwayComponent implements OnInit {
 
   character: string[] = [];
 
-  backgroundSrc = "/assets/Hallway.png";
+  
 
 
   constructor(private router: Router, private service: MasterService, private charService: CharacterService) { }

@@ -1,13 +1,7 @@
 .body {
   width: 100vw;
   height: 100vh;
-  margin: 0px;
   overflow: hidden;
-}
-
-.char {
-  height: 60%;
-  position: absolute;
 }
 
 .characterParts {
@@ -23,6 +17,7 @@
   overflow: hidden;
 }
 .char.meanGirl {
+  position: absolute;
   height: 90%;
   top: 10%;
   left: 65%;
@@ -34,7 +29,6 @@
 img {
   height: 100%;
   width: auto;
-  overflow: hidden;
 }
 
 .dialogue.hide {
@@ -146,6 +140,8 @@ img {
   animation: moved 4s forwards;
 }
 
+
+/* mean girl transition out */
 /* "moved" relates the the .animate class */
 @keyframes moved {
   0% {
@@ -186,6 +182,8 @@ img {
   display: none;
 }
 
+
+/* main girl leaving bathroom transition */
 .transition {
   animation: transition 4s forwards;
 }

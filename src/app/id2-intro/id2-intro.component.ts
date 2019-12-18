@@ -11,7 +11,7 @@ import { CharacterService } from '../services/character.service';
 })
 export class Id2IntroComponent implements OnInit {
   name: string;
-  total: TotalScore;
+  
   // creates and array to hold the selected images urls
   character: string[] = new Array(6);
 
@@ -62,8 +62,7 @@ export class Id2IntroComponent implements OnInit {
   ngOnInit() {
     this.name = this.service.getName();
     console.log(this.name);
-    this.total = this.service.getTS();
-    console.log(this.total);
+    
     // set the array to the items in the service
     this.body = this.charService.getBody();
     this.eye = this.charService.getEyes();

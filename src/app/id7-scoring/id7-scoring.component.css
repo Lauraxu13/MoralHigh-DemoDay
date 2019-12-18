@@ -12,6 +12,7 @@
 h1 {
   text-shadow: 2px 2px white;
   margin: 30px;
+  font-size: 4vw;
 }
 
 p {
@@ -40,19 +41,4 @@ button {
 
 button:hover {
   transform: scale(1.1);
-}
-
-@media only screen and (min-width: 680px) {
-  button {
-    font-size: 2.5rem;
-  }
-  h1 {
-    font-size: 4rem;
-    margin: 70px;
-  }
-
-  p {
-    font-size: 2rem;
-    margin: 10px;
-  }
 }

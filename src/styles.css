@@ -1,67 +1,44 @@
 body {
-    margin: 0;
-    overflow: auto;
-    
+  margin: 0;
+  overflow: auto;
 }
-
 
 .hallwayBody {
-    margin: 0 auto;
-    background-image: url("/assets/Hallway.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    overflow: hidden;
-
+  margin: 0 auto;
+  background-image: url("/assets/Hallway.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
 }
-
-
-
-
 
 .bathroomBody {
-    margin: 0 auto;
-    background-image: url("/assets/hsbathroom.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-        overflow: hidden;
-
-
-
+  margin: 0 auto;
+  background-image: url("/assets/hsbathroom.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
 }
-
 
 .classBody {
-    margin: 0 auto;
-    background-image: url("/assets/classroom.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    overflow: hidden;
-
-
-
+  margin: 0 auto;
+  background-image: url("/assets/classroom.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
 }
-
-
 
 .gymBody {
-    margin: 0 auto;
-    background-image: url("/assets/gym.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    /* overflow: hidden; */
-
-
-
+  margin: 0 auto;
+  background-image: url("/assets/gym.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* overflow: hidden; */
 }
 
-
-
-.mainBody{
-    background-image: ("/assets/moralhighmaincharacter.png")
+.mainBody {
+  background-image: ("/assets/moralhighmaincharacter.png");
 }
-
-

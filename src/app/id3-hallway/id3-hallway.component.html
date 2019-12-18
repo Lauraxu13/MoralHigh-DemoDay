@@ -1,5 +1,5 @@
 <div class="body">
-  <!-- <div class="content"> -->
+ 
   <div class="dialogue" [ngClass]="{ one: !showDialogue }">
     <p>What a relief, here comes my best friend.
       <br>
@@ -8,7 +8,7 @@
   </div>
 
   <div class="mainCharacter">
-    <div class="characterParts" *ngFor="let part of character; index as i" [style.background-image]="part"></div>
+    <div class="characterParts" *ngFor="let part of character" [style.background-image]="part"></div>
   </div>
 
 
@@ -20,5 +20,5 @@
   </div>
 
   <button type="button" class="next" (click)="nextButton()">Next</button>
-  <!-- </div> -->
+  
 </div>

@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { Router } from "@angular/router";
-import { MasterService } from '../services/master.service';
-import { TotalScore } from '../total-score';
-import { CharacterService } from '../services/character.service';
+import { MasterService } from "../services/master.service";
+import { TotalScore } from "../total-score";
+import { CharacterService } from "../services/character.service";
 
 @Component({
   selector: "app-id4-bathroom",
@@ -15,7 +15,6 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
   hideDialogue: boolean = false;
   showOpt: boolean = true;
   total: TotalScore;
-  totalOnInit: TotalScore;
   flip: boolean = true;
   seconds: number = 8;
   private timer: any;
@@ -24,11 +23,11 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
   animateSeconds: number = 5;
   buttonHide: boolean = true;
 
-
-
-  constructor(private router: Router, private service: MasterService, private charService: CharacterService) { }
-
-
+  constructor(
+    private router: Router,
+    private service: MasterService,
+    private charService: CharacterService
+  ) {}
 
   //countdown for time sensitive question
   countDown(): any {
@@ -62,6 +61,22 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
     console.log("countdown happening");
   }
 
+  // triggers animaiton and routes to next page
+  animationCountDown(): any {
+    this.animateSeconds = this.animateSeconds - 1;
+    if (this.animateSeconds < 0) {
+      this.router.navigate(["homework"]);
+
+      console.log(this.total);
+    } else {
+      setTimeout(() => {
+        this.animationCountDown();
+      }, 1000);
+    }
+
+    console.log("animate countdown happening");
+  }
+
   // onClick -->  shows dialogue, starts flip and animation, brings up options div and starts Countdown
   nextButton() {
     this.nextCounter++;
@@ -92,7 +107,7 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
 
     // distroy timer
     clearTimeout(this.timer);
-    
+
     this.animationCountDown();
     console.log(this.transition);
 
@@ -122,28 +137,11 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
     console.log(this.total);
   }
 
-  // triggers animaiton and routes to next page
-  animationCountDown(): any {
-    this.animateSeconds = this.animateSeconds - 1;
-    if (this.animateSeconds < 0) {
-      this.router.navigate(["homework"]);
-
-      console.log(this.total);
-    } else {
-      setTimeout(() => {
-        this.animationCountDown();
-      }, 1000);
-    }
-
-    console.log("animate countdown happening");
-  }
-
   ngOnInit() {
     this.total = this.service.getTS();
-    this.totalOnInit = this.service.getTS();
     this.character = this.charService.getCharacter();
-    document.body.classList.add('bathroomBody');
-    console.log(this.character)
+    document.body.classList.add("bathroomBody");
+    console.log(this.character);
   }
 
   ngOnDestroy() {

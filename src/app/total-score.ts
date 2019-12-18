@@ -8,6 +8,4 @@ export interface TotalScore {
     Jock: number;
     Personality: string;
 
-
-
 }

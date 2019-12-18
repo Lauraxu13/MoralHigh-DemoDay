@@ -14,7 +14,7 @@ import { MusicService } from '../services/music.service';
 })
 export class Id1HomePageComponent implements OnInit {
   name: string;
-  total: TotalScore;
+ 
 
   //on click submit --> name into service, start music, routes to intro page
   newPlayer(name: string) {

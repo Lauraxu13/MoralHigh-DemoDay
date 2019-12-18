@@ -9,7 +9,6 @@ import { CharacterService } from '../services/character.service';
   styleUrls: ["./id6-gym.component.css"]
 })
 export class Id6GymComponent implements OnInit {
-  score: any;
   name: string;
   nextCounter: number = 0;
   hideDialogue: boolean = true;
@@ -17,14 +16,7 @@ export class Id6GymComponent implements OnInit {
   total: TotalScore;
   personality: string;
   character: string[];
-  // popular: number;
-  // unpopular: number;
-  // nice: number;
-  // bully: number;
-  // Nerd: number;
-  // jock: number;
-
-
+  
 
   constructor(private router: Router, private service: MasterService, private charService: CharacterService) { }
 
