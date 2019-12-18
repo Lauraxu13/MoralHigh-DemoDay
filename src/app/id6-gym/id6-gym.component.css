@@ -1,175 +1,134 @@
-html{
-    font-size: 100%;
+html {
+  font-size: 100%;
 }
 .body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0px;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
 }
 
-
-.dialogue.hide{
-    display: none
+.dialogue.hide {
+  display: none;
 }
 
 .opt3.hide {
-    display: none;
+  display: none;
 }
 
-
-
-.dialogue.hide.helped{
-    display:initial;
-    
-   
+.dialogue.hide.helped {
+  display: initial;
 }
-
-
 
 .dialogue > p {
-    font-size: 2vw;
-    padding: 1%;
-    font-family: 'Gelasio', sans-serif;
-    position: absolute;
-    top: 8%;
-    left: 35%;
-    /* word-wrap: break-word; */
-    width: 15%;
-    height: auto;
-    padding: 3%;
-    text-align: center;
-    border-radius: 50%;
-    background-color: rgb(255, 255, 255, 0.8);
-    /* box-sizing: border-box; */
-    /* text-overflow: clip; */
-}
-    
-   
+  font-size: 2vw;
+  padding: 1%;
+  font-family: "Gelasio", sans-serif;
+  position: absolute;
+  top: 8%;
+  left: 35%;
 
+  width: 15%;
+  height: auto;
+  padding: 3%;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255, 0.8);
+}
 
 .gym2 {
-    position: absolute;
-    z-index: 10;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(128, 128, 128, 0.6);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
+  position: absolute;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(128, 128, 128, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
 
 .gym2 > p {
-    margin: 0 auto;
-    margin-top: 10%;
-    font-size: 2vw;
-    background-color: rgb(255, 255, 255, 0.8);
-    border-radius: 20px;
-    padding: 50px;
+  margin: 0 auto;
+  margin-top: 10%;
+  font-size: 2vw;
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 50px;
 }
-    
-    
+
 .gym2 button {
-    width: 50%;
-    height: auto;       
-    margin: 0 auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    background-color: rgb(255, 255, 255, 0.8);
-    border-radius: 10px;
-    font-weight: 800;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 2vw;
-    
-    }
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 10px;
+  font-weight: 800;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 2vw;
+}
 
-
-
-.char{
-    height: 80%;
-    /* width: 2%; */
-    position: absolute;
-
+.char {
+  height: 80%;
+  position: absolute;
 }
 
 .characterParts {
-    top: 10%;
-    left: 65%;
-    position: absolute;
-    height: 80%;
-    width: 20%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain    ;
-    z-index: 5;
-  }
-
-.meanGirl{
-    top: 15%;
-    left: 20%;
+  top: 10%;
+  left: 65%;
+  position: absolute;
+  height: 80%;
+  width: 20%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 5;
 }
 
+.meanGirl {
+  top: 15%;
+  left: 20%;
+}
 
 img {
-    height: 100%;
+  height: 100%;
 }
 
-.show{
-
-    display:none;
+.show {
+  display: none;
 }
-
-
 
 .next {
-    background-color: #A00100;
-    border: 2px solid black;
-    color: white;
-    font-family: 'Notable', sans-serif;
-    text-shadow: 2px 2px black;
-    letter-spacing: 10px;
-    text-align: center;
-    transition: transform .2s; 
-    position: absolute;
-    z-index: 10;
-    top: 85%;
-    left: 75%;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    width: auto;
-    border-radius: 10px;
-    font-size: 2.5vw;
-  }
+  background-color: #a00100;
+  border: 2px solid black;
+  color: white;
+  font-family: "Notable", sans-serif;
+  text-shadow: 2px 2px black;
+  letter-spacing: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+  position: absolute;
+  z-index: 10;
+  top: 85%;
+  left: 75%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  width: auto;
+  border-radius: 10px;
+  font-size: 2.5vw;
+}
 
-.next:hover { 
-    transform: scale(1.1); 
-  }
+.next:hover {
+  transform: scale(1.1);
+}
 
 .next.hide {
-    display:none;
+  display: none;
 }
 
-
-.opt3.hide.helped{
-    display: initial;
-}
-
-
-@media only screen and (min-width: 680px){
-/* 
-    .dialogue > p {
-    font-size: 1.5rem;
-    }
-
-    button {
-        font-size: 2.5rem;
-    }
-    .next {
-        font-size: 2rem;
-    } */
-
+.opt3.hide.helped {
+  display: initial;
 }
