@@ -34,8 +34,6 @@ export class MasterService {
     "url('/assets/options/mainchartop1.png')"
   ];
 
-
-
   body: any[] =
 
     [
