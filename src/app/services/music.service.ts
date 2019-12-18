@@ -24,11 +24,4 @@ toggleSound():any {
   }
 }
 
-
-// Get from Service 
-
-
-// Set to Service
-
-
 }

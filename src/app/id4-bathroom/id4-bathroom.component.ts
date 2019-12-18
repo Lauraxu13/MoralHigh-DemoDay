@@ -90,6 +90,9 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
     this.transition = !this.transition;
     this.buttonHide = !this.buttonHide;
 
+    // distroy timer
+    clearTimeout(this.timer);
+    
     this.animationCountDown();
     console.log(this.transition);
 
@@ -110,6 +113,9 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
     this.doAnimate = !this.doAnimate;
     this.transition = !this.transition;
     this.buttonHide = !this.buttonHide;
+
+    // distroy timer
+    clearTimeout(this.timer);
 
     this.animationCountDown();
 
