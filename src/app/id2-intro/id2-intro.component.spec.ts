@@ -1,14 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Id2IntroComponent } from './id2-intro.component';
+import { FormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { MasterService } from '../master.service';
 
-describe('Id2IntroComponent', () => {
+xdescribe('Id2IntroComponent', () => {
   let component: Id2IntroComponent;
   let fixture: ComponentFixture<Id2IntroComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Id2IntroComponent ]
+      declarations: [ Id2IntroComponent ],
+      providers: [ MasterService ],
+      imports: [ FormsModule,
+        RouterTestingModule,
+        HttpClientTestingModule ]
     })
     .compileComponents();
   }));
@@ -22,4 +30,7 @@ describe('Id2IntroComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  // it('set body to the service ',()=>{
+
+  // })
 });

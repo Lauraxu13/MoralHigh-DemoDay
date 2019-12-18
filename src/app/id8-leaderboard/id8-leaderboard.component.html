@@ -2,22 +2,19 @@
 
   <button><a href='https://moral-highschool.surge.sh/home'> try again</a></button>
 
+  <a href=""></a>
   <header class="head">
-    <img src="/assets/banner.png">
+    <img src="/assets/banner.png" />
     <h1>Class List</h1>
   </header>
   <div class="main">
     <ol class="scores">
       <li *ngFor="let row of leaderBoard">
-
-        Name: {{row.name}} Result: {{row.personality}} popular: {{row.popular}} unpopular: {{row.unpopular}}
-        nice: {{row.nice}}
-        nerd: {{row.nerd}} bully: {{row.bully}} jock: {{row.jock}}
-
-
+        Name: {{ row.name }} Result: {{ row.personality }} Popular:
+        {{ row.popular }} Unpopular: {{ row.unpopular }} Nice:
+        {{ row.nice }} Nerd: {{ row.nerd }} Bully: {{ row.bully }} Jock:
+        {{ row.jock }}
       </li>
     </ol>
-
   </div>
-
 </body>

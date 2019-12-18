@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Id9TransitionComponent } from './id9-transition.component';
 
-describe('Id9TransitionComponent', () => {
+xdescribe('Id9TransitionComponent', () => {
   let component: Id9TransitionComponent;
   let fixture: ComponentFixture<Id9TransitionComponent>;
 
