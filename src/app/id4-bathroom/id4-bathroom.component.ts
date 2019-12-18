@@ -1,7 +1,8 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { Router } from "@angular/router";
-import { MasterService } from "../master.service";
-import { TotalScore } from "../total-score";
+import { MasterService } from '../services/master.service';
+import { TotalScore } from '../total-score';
+import { CharacterService } from '../services/character.service';
 
 @Component({
   selector: "app-id4-bathroom",
@@ -23,7 +24,11 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
   animateSeconds: number = 5;
   buttonHide: boolean = true;
 
-  constructor(private router: Router, private service: MasterService) {}
+
+
+  constructor(private router: Router, private service: MasterService, private charService: CharacterService) { }
+
+
 
   //countdown for time sensitive question
   countDown(): any {
@@ -31,15 +36,15 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
     this.seconds = this.seconds - 1;
     //when timer reaches 0 update scores and routes to next page
     if (this.seconds < 0) {
-      this.total.popular = this.total.popular - 1;
-      this.total.unpopular = this.total.unpopular + 1;
+      this.total.Popular = this.total.Popular - 1;
+      this.total.Unpopular = this.total.Unpopular + 1;
 
-      this.service.setTSpopularity(this.total.popular, this.total.unpopular);
+      this.service.setTSpopularity(this.total.Popular, this.total.Unpopular);
 
-      this.total.nice = this.total.nice - 2;
-      this.total.bully = this.total.bully + 2;
+      this.total.Nice = this.total.Nice - 2;
+      this.total.Bully = this.total.Bully + 2;
 
-      this.service.setTScharisma(this.total.nice, this.total.bully);
+      this.service.setTScharisma(this.total.Nice, this.total.Bully);
 
       this.showOpt = !this.showOpt;
       this.transition = !this.transition;
@@ -72,13 +77,13 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
 
   //Option 1 for Page 4 -- sets new scores
   opt1id4() {
-    this.total.popular = this.total.popular + 1;
-    this.total.unpopular = this.total.unpopular - 1;
-    this.service.setTSpopularity(this.total.popular, this.total.unpopular);
+    this.total.Popular = this.total.Popular + 1;
+    this.total.Unpopular = this.total.Unpopular - 1;
+    this.service.setTSpopularity(this.total.Popular, this.total.Unpopular);
 
-    this.total.nice = this.total.nice + 2;
-    this.total.bully = this.total.bully - 2;
-    this.service.setTScharisma(this.total.nice, this.total.bully);
+    this.total.Nice = this.total.Nice + 2;
+    this.total.Bully = this.total.Bully - 2;
+    this.service.setTScharisma(this.total.Nice, this.total.Bully);
 
     this.showOpt = !this.showOpt;
     this.doAnimate = !this.doAnimate;
@@ -93,13 +98,13 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
 
   //Option 2 for page 4 -- sets new scores
   opt2id4() {
-    this.total.popular = this.total.popular - 1;
-    this.total.unpopular = this.total.unpopular + 1;
-    this.service.setTSpopularity(this.total.popular, this.total.unpopular);
+    this.total.Popular = this.total.Popular - 1;
+    this.total.Unpopular = this.total.Unpopular + 1;
+    this.service.setTSpopularity(this.total.Popular, this.total.Unpopular);
 
-    this.total.nice = this.total.nice - 2;
-    this.total.bully = this.total.bully + 2;
-    this.service.setTScharisma(this.total.nice, this.total.bully);
+    this.total.Nice = this.total.Nice - 2;
+    this.total.Bully = this.total.Bully + 2;
+    this.service.setTScharisma(this.total.Nice, this.total.Bully);
 
     this.showOpt = !this.showOpt;
     this.doAnimate = !this.doAnimate;
@@ -130,9 +135,9 @@ export class Id4BathroomComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.total = this.service.getTS();
     this.totalOnInit = this.service.getTS();
-    this.character = this.service.getCharacter();
-    document.body.classList.add("bathroomBody");
-    console.log(this.character);
+    this.character = this.charService.getCharacter();
+    document.body.classList.add('bathroomBody');
+    console.log(this.character)
   }
 
   ngOnDestroy() {

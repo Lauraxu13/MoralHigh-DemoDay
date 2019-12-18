@@ -1,12 +1,12 @@
 export interface TotalScore {
-    name: string;
-    popular: number;
-    unpopular: number;
-    nice: number;
-    bully: number;
-    nerd: number;
-    jock: number;
-    personality: string;
+    Name: string;
+    Popular: number;
+    Unpopular: number;
+    Nice: number;
+    Bully: number;
+    Nerd: number;
+    Jock: number;
+    Personality: string;
 
 
 

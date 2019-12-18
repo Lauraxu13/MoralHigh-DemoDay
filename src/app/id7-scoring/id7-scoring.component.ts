@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TotalScore } from '../total-score';
 import { Router } from '@angular/router';
-import { MasterService } from '../master.service';
+import { MasterService } from '../services/master.service';
 
 @Component({
   selector: 'app-id7-scoring',
@@ -23,7 +23,7 @@ export class Id7ScoringComponent implements OnInit {
   }
 
   update() {
-    this.service.updateDatabase(this.total.name, this.total.popular, this.total.unpopular, this.total.nice, this.total.jock, this.total.bully, this.total.nerd, this.total.personality).subscribe(scores => {
+    this.service.updateDatabase(this.total.Name, this.total.Popular, this.total.Unpopular, this.total.Nice, this.total.Jock, this.total.Bully, this.total.Nerd, this.total.Personality).subscribe(scores => {
       this.score = scores
     });
   }
@@ -33,7 +33,7 @@ export class Id7ScoringComponent implements OnInit {
     this.total = this.service.getTS();
     console.log(this.total)
     this.scores = this.service.calculatePersonality();
-    this.total.personality = this.service.totalScore.personality;
+    this.total.Personality = this.service.totalScore.Personality;
     this.highScore = this.service.highScore;
     this.update();
     document.body.classList.add('scoresBody');

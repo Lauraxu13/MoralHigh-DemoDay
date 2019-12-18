@@ -1,10 +1,11 @@
 import { Component, OnInit } from "@angular/core";
-import { MasterService } from "../master.service";
+import { MasterService } from "../services/master.service";
 import { Router } from "@angular/router";
 import { Id2IntroComponent } from "../id2-intro/id2-intro.component";
 import { TotalScore } from "../total-score";
-import { NgForm } from "@angular/forms";
-import { MusicService } from "../music.service";
+import { NgForm } from '@angular/forms';
+import { MusicService } from '../services/music.service';
+
 
 @Component({
   selector: "app-id1-home-page",
@@ -27,7 +28,7 @@ export class Id1HomePageComponent implements OnInit {
     private router: Router,
     private service: MasterService,
     public musicService: MusicService
-  ) {}
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

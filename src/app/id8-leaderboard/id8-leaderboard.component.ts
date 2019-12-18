@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MasterService } from '../master.service';
+import { MasterService } from '../services/master.service';
 import { TotalScore } from '../total-score';
 
 @Component({
@@ -9,10 +9,19 @@ import { TotalScore } from '../total-score';
   styleUrls: ['./id8-leaderboard.component.css']
 })
 export class Id8LeaderboardComponent implements OnInit {
+
   leaderBoard: [];
+  index: number;
+  results: boolean = false;
+
+
   constructor(private router: Router, private service: MasterService) { }
 
+  showResults(i) {
+    this.index = i;
+    this.results = !this.results;
 
+  }
 
   ngOnInit() {
     this.service.getLeaderBoard().subscribe(leaderBoard => {

@@ -9,11 +9,18 @@
   </header>
   <div class="main">
     <ol class="scores">
-      <li *ngFor="let row of leaderBoard">
-        Name: {{ row.name }} Result: {{ row.personality }} Popular:
-        {{ row.popular }} Unpopular: {{ row.unpopular }} Nice:
-        {{ row.nice }} Nerd: {{ row.nerd }} Bully: {{ row.bully }} Jock:
-        {{ row.jock }}
+      <li *ngFor="let row of leaderBoard; index as i" (click)="showResults(i)">
+        <span><span class="bold">Name:</span> {{ row.name }}</span>
+        <span><span class="bold">Result:</span> {{ row.personality }}</span>
+
+        <div class="results" *ngIf="index === i && results">
+          <span>Popular: {{ row.popular }} </span>
+          <span>Unpopular: {{ row.unpopular }} </span>
+          <span>Nice: {{ row.nice }} </span>
+          <span> Nerd: {{ row.nerd }} </span>
+          <span> Bully: {{ row.bully }} </span>
+          <span>Jock: {{ row.jock }} </span>
+        </div>
       </li>
     </ol>
   </div>

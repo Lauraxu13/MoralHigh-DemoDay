@@ -1,7 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -13,7 +13,6 @@ import { Id5HomeworkDueComponent } from "./id5-homework-due/id5-homework-due.com
 import { Id6GymComponent } from "./id6-gym/id6-gym.component";
 import { Id7ScoringComponent } from "./id7-scoring/id7-scoring.component";
 import { Id8LeaderboardComponent } from './id8-leaderboard/id8-leaderboard.component';
-import { Id9TransitionComponent } from './id9-transition/id9-transition.component';
 import { Id10MusicComponent } from './id10-music/id10-music.component';
 
 
@@ -28,14 +27,13 @@ import { Id10MusicComponent } from './id10-music/id10-music.component';
     Id6GymComponent,
     Id7ScoringComponent,
     Id8LeaderboardComponent,
-    Id9TransitionComponent,
     Id10MusicComponent,
-    
-    
-    
+
+
+
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

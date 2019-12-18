@@ -23,6 +23,18 @@ h1 {
   justify-content: center;
 }
 
+
+.bold {
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+
+.results {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
 .scores {
   list-style: none;
   width: 100%;
@@ -46,12 +58,14 @@ h1 {
   padding: 10px;
   margin: 10px;
   transition: width 0.1s;
-  width: 180px;
+  width: 400px;
   background: rgba(141, 14, 2, 1);
   overflow: hidden;
   text-overflow: ellipsis;
   height: 10px;
   text-align-last: justify;
+  display: flex;
+  justify-content: space-around;
   color: white;
   counter-increment: my-awesome-counter;
 }
@@ -65,6 +79,12 @@ h1 {
   width: 600px;
   background: rgba(141, 14, 2, 1);
   text-align-last: justify;
+}
+
+
+
+.scores li > div {
+  display: inline;
 }
 
 img {
@@ -96,62 +116,22 @@ button {
   position: relative;
   right: 0;
   left: 35%;
+  font-size: 2.5vw;
+
 }
 button:hover {
   transform: scale(1.1);
 }
 
 @media only screen and (min-width: 680px) {
-  button {
-    background-color: #a00100;
-    border: 2px solid black;
-    color: white;
-    font-family: "Notable", sans-serif;
-    text-shadow: 2px 2px black;
-    letter-spacing: 10px;
-    text-align: center;
-    transition: transform 0.2s;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    width: 20%;
-    border-radius: 10px;
-    font-size: 1rem;
-    z-index: 10;
-    position: absolute;
-    right: 0;
-    left: auto;
-  }
-  button:hover {
-    transform: scale(1.1);
-  }
 
   .scores li {
-    border: 1px solid;
-    border-radius: 50px;
     padding: 20px;
-    margin: 10px;
-    background: rgba(141, 14, 2, 1);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: 10px;
-    text-align-last: justify;
     width: 80%;
     margin: 30px;
   }
   .scores li:hover {
-    border: 1px solid;
-
-    border-radius: 50px;
-
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    transition: 0.3s;
     width: 85%;
-    background: rgba(141, 14, 2, 1);
-    text-align-last: justify;
     margin: 30px;
   }
 }

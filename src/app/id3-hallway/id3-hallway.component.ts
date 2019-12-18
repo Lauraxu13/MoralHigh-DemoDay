@@ -1,8 +1,7 @@
 import { Component, OnInit, HostBinding } from "@angular/core";
 import { Router } from "@angular/router";
-import { MasterService } from "../master.service";
-import { routeFadeStateTrigger } from "../route-animations";
-import { trigger, transition, style, animate } from "@angular/animations";
+import { MasterService } from '../services/master.service';
+import { CharacterService } from '../services/character.service';
 
 @Component({
   selector: "app-id3-hallway",
@@ -21,8 +20,8 @@ export class Id3HallwayComponent implements OnInit {
 
   backgroundSrc = "/assets/Hallway.png";
 
-  constructor(private router: Router, private service: MasterService) {}
 
+  constructor(private router: Router, private service: MasterService, private charService: CharacterService) { }
 
   //onclick 
   nextButton() {
@@ -40,8 +39,8 @@ export class Id3HallwayComponent implements OnInit {
   }
 
   ngOnInit() {
-    document.body.classList.add("hallwayBody");
-    this.character = this.service.getCharacter();
+    document.body.classList.add('hallwayBody');
+    this.character = this.charService.getCharacter();
     this.name = this.service.getName();
   }
 }

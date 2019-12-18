@@ -1,7 +1,8 @@
-import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
-import { MasterService } from "../master.service";
-import { TotalScore } from "../total-score";
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MasterService } from '../services/master.service';
+import { TotalScore } from '../total-score';
+import { CharacterService } from '../services/character.service';
 
 @Component({
   selector: "app-id2-intro",
@@ -21,13 +22,14 @@ export class Id2IntroComponent implements OnInit {
   bottom: any[];
   top: any[];
 
-  constructor(private router: Router, private service: MasterService) {}
+
+
+  constructor(private router: Router, private service: MasterService, private charService: CharacterService) { }
 
   // on click --> sets  custom character design into character service and routes to hallway
   nextButton() {
     this.router.navigate(["hallway"]);
-    // sets the character in the service to the updated array
-    this.service.setCharacter(this.character)
+    this.charService.setCharacter(this.character)
 
   }
 
@@ -63,13 +65,16 @@ export class Id2IntroComponent implements OnInit {
     this.total = this.service.getTS();
     console.log(this.total);
     // set the array to the items in the service
-    this.body = this.service.getBody();
-    this.eye = this.service.getEyes();
-    this.hair = this.service.getHair();
-    this.bottom = this.service.getBottom();
-    this.top = this.service.getTop();
-    this.character = this.service.getCharacter();
-    console.log(this.character);
-    console.log(this.body);
+    this.body = this.charService.getBody();
+    this.eye = this.charService.getEyes();
+    this.hair = this.charService.getHair();
+    this.bottom = this.charService.getBottom();
+    this.top = this.charService.getTop();
+    this.character = this.charService.getCharacter();
+    console.log(this.character)
+    console.log(this.body)
+
+
+
   }
 }
