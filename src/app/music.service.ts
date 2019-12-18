@@ -8,13 +8,12 @@ export class MusicService {
   constructor() { }
 
 //Class in HTML
-  mute: boolean = true;
+mute: boolean = true;
 
  // Music
 backMusic = new Audio("assets/flatZone.mp3");
 
 // toggle method
-
 toggleSound():any {
   this.mute = !this.mute;
   if (this.mute === true) {
@@ -23,12 +22,5 @@ toggleSound():any {
     this.backMusic.play();
   }
 }
-
-
-// Get from Service 
-
-
-// Set to Service
-
 
 }

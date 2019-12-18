@@ -1,94 +1,88 @@
 .master {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    background-color: #cecece;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: #cecece;
 }
 
-img{
-    width: 50%;
-    height: auto;
+img {
+  width: 50%;
+  height: auto;
 }
-
 
 label {
-    display: flex;
-    flex-direction: column;
-    padding: 2%;
-    color: black;
-    text-shadow: 2px 2px white;
-    width: 50%;
-    text-align: center;
-    font-family: 'Notable', sans-serif;
-    letter-spacing: 3px;
-
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  color: black;
+  text-shadow: 2px 2px white;
+  width: 50%;
+  text-align: center;
+  font-family: "Notable", sans-serif;
+  letter-spacing: 3px;
 }
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
 }
 
 input {
-    margin-top: 5%;
-    margin-bottom: 2%;
-    border-radius: 20px;
-    border: 1px solid black;
-    text-align: center;
-    padding: 1%;
-    align-self: center;
-    width: 50%;
-    letter-spacing: 3px;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  border-radius: 20px;
+  border: 1px solid black;
+  text-align: center;
+  padding: 1%;
+  align-self: center;
+  width: 50%;
+  letter-spacing: 3px;
 }
-button{
-
-    background-color: #A00100;
-    color: white;
-    border: 4px solid black;
-    border-radius: 10px;
-    font-size: 1rem;
-    margin-top: 2%;
-    width: 50%;
-    font-family: 'Notable', sans-serif;
-    letter-spacing: 10px;
-    text-shadow: 2px 2px black;
-    transition: transform .2s; 
-
+button {
+  background-color: #a00100;
+  color: white;
+  border: 4px solid black;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-top: 2%;
+  width: 50%;
+  font-family: "Notable", sans-serif;
+  letter-spacing: 10px;
+  text-shadow: 2px 2px black;
+  transition: transform 0.2s;
 }
 
-button:hover { 
-    transform: scale(1.1); 
+button:hover {
+  transform: scale(1.1);
 }
 
-
-p{
-    font-family: "Gelasio", sans-serif;
-    margin: 0;
+p {
+  font-family: "Gelasio", sans-serif;
+  margin: 0;
 }
 
 @media (min-width: 680px) {
-    .master {
-        padding-top: 0%;
-    }
-
-    label {
-        font-size: 2.5em;
-    }
-
-    input {
-        font-size: 1em;
-    }
-    button{
-        font-size: 2rem;
-        padding: 2%;
-      
-    }
-
-    p {
-        font-size: 2rem;
-    }
+  .master {
+    padding-top: 0%;
   }
+
+  label {
+    font-size: 2.5em;
+  }
+
+  input {
+    font-size: 1em;
+  }
+  button {
+    font-size: 2rem;
+    padding: 2%;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}

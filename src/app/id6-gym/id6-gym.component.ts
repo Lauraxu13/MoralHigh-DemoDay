@@ -23,9 +23,9 @@ export class Id6GymComponent implements OnInit {
   nerd: number;
   jock: number;
 
+  constructor(private router: Router, private service: MasterService) {}
 
-
-  constructor(private router: Router, private service: MasterService) { }
+  //onClick -->  shows Options
   nextButton() {
     this.nextCounter++;
     if (this.nextCounter <= 1) {
@@ -34,6 +34,8 @@ export class Id6GymComponent implements OnInit {
     }
     console.log(this.nextCounter);
   }
+
+  //Option 1 on page 6 -- sets new scores and routes to score page
   opt1id6() {
     this.total.nerd = this.total.nerd - 2;
     this.total.jock = this.total.jock + 2;
@@ -44,10 +46,11 @@ export class Id6GymComponent implements OnInit {
     this.service.setTSpopularity(this.total.popular, this.total.unpopular);
 
     //send updates to database
-    // this.update();
     this.router.navigate(["score"]);
     console.log(this.total);
   }
+
+  //Option 2 on page 6 -- sets new scores and routes to score page
   opt2id6() {
     this.total.nerd = this.total.nerd + 2;
     this.total.jock = this.total.jock - 2;
@@ -57,11 +60,11 @@ export class Id6GymComponent implements OnInit {
     this.total.unpopular = this.total.popular + 1;
     this.service.setTSpopularity(this.total.popular, this.total.unpopular);
     // send updates to database
-    // this.update();
     this.router.navigate(["score"]);
     console.log(this.total);
   }
 
+  //Option 3 on page 6 --!! only appears if you helped Heather earlier condition set in HTML sets new scores and routes to score page
   opt3id6() {
     this.total.nerd = this.total.nerd - 1;
     this.total.jock = this.total.jock - 1;
@@ -76,19 +79,11 @@ export class Id6GymComponent implements OnInit {
     console.log(this.total);
   }
 
-  // update() {
-  //   this.service.updateDatabase(this.total.name, this.total.popular, this.total.unpopular, this.total.nice, this.total.jock, this.total.bully, this.total.nerd, this.total.personality).subscribe(scores => {
-  //     this.score = scores
-  //   });
-  // }
   ngOnInit() {
     document.body.classList.add("gymBody");
     this.name = this.service.getName();
     this.total = this.service.getTS();
     this.character = this.service.getCharacter();
     this.name = this.service.getName();
-    // call the service, add .subscribe();
   }
 }
-
-

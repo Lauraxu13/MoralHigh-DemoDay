@@ -7,28 +7,14 @@ import { MusicService } from '../music.service';
   styleUrls: ["./id10-music.component.css"]
 })
 export class Id10MusicComponent implements OnInit {
-  // mute: boolean = true;
-  // backMusic = new Audio("assets/flatZone.mp3");
 
-  // toggleSound() {
-  //   this.mute = !this.mute;
-  //   if (this.mute === true) {
-  //     this.backMusic.pause();
-  //   } else {
-  //     this.backMusic.play();
-  //   }
-  // }
+  constructor(public musicService: MusicService) {}
 
-  constructor(public musicService: MusicService) {
-
-
-  }
-
+  //pulles toggle sound from music service 
   toggleThatSound() {
-
     this.musicService.toggleSound();
   }
-  ngOnInit() {
 
-  }
+
+  ngOnInit() {}
 }

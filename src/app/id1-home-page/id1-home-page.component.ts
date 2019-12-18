@@ -3,9 +3,8 @@ import { MasterService } from "../master.service";
 import { Router } from "@angular/router";
 import { Id2IntroComponent } from "../id2-intro/id2-intro.component";
 import { TotalScore } from "../total-score";
-import { NgForm } from '@angular/forms';
-import { MusicService } from '../music.service';
-
+import { NgForm } from "@angular/forms";
+import { MusicService } from "../music.service";
 
 @Component({
   selector: "app-id1-home-page",
@@ -16,17 +15,19 @@ export class Id1HomePageComponent implements OnInit {
   name: string;
   total: TotalScore;
 
-
+  //on click submit --> name into service, start music, routes to intro page
   newPlayer(name: string) {
     this.service.setName(name);
     console.log(name);
     this.musicService.toggleSound();
     this.router.navigate(["/intro"]);
-
   }
 
-  constructor(private router: Router, private service: MasterService, public musicService: MusicService) { }
+  constructor(
+    private router: Router,
+    private service: MasterService,
+    public musicService: MusicService
+  ) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }
