@@ -12,9 +12,10 @@ export class Id2IntroComponent implements OnInit {
 
   name: string;
   total: TotalScore;
-
+  // creates and array to hold the selected images urls
   character: string[] = new Array(6);
 
+  // each of this pull in the URLs from the service and display in the HTML
   body: any[];
   eye: any[];
   hair: any[];
@@ -28,12 +29,14 @@ export class Id2IntroComponent implements OnInit {
 
   nextButton() {
     this.router.navigate(["hallway"]);
+    // sets the character in the service to the updated array
     this.service.setCharacter(this.character)
 
   }
 
-
+  // the index of the item selected is passed in as a parameter
   setBody(i: number) {
+    //the selected item is set to the main character array
     this.character[1] = this.body[i].main;
     console.log(this.body[i].main);
     console.log(this.character)
@@ -66,6 +69,7 @@ export class Id2IntroComponent implements OnInit {
     console.log(this.name);
     this.total = this.service.getTS();
     console.log(this.total);
+    // set the array to the items in the service
     this.body = this.service.getBody();
     this.eye = this.service.getEyes();
     this.hair = this.service.getHair();
