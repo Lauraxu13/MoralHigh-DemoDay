@@ -15,14 +15,14 @@ import { MusicService } from '../music.service';
 export class Id1HomePageComponent implements OnInit {
   name: string;
   total: TotalScore;
-  
+
 
   newPlayer(name: string) {
     this.service.setName(name);
     console.log(name);
     this.musicService.toggleSound();
     this.router.navigate(["/intro"]);
-    
+
   }
 
   constructor(private router: Router, private service: MasterService, public musicService: MusicService) { }

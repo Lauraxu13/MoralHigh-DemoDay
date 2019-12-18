@@ -19,13 +19,13 @@ export class Id10MusicComponent implements OnInit {
   //   }
   // }
 
-  constructor( public musicService: MusicService) {
+  constructor(public musicService: MusicService) {
 
-    
+
   }
 
-  toggleThatSound(){
-    
+  toggleThatSound() {
+
     this.musicService.toggleSound();
   }
   ngOnInit() {
