@@ -4,7 +4,7 @@ import { Id2IntroComponent } from './id2-intro.component';
 import { FormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { MasterService } from '../master.service';
+import { MasterService } from '../services/master.service';
 
 xdescribe('Id2IntroComponent', () => {
   let component: Id2IntroComponent;
